@@ -1,0 +1,86 @@
+#secondary-bar {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 9rem);
+  padding: 1rem 1rem 0 1rem;
+  background-color: #121212;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+#secondary-bar-content {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#song-img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#artist-img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+#next-song-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+#about-artist {
+  background-color: #1f1f1f;
+  padding: 1rem;
+  border-radius: 0 0 8px 8px;
+}
+
+#credits {
+  background-color: #1f1f1f;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+#queue {
+  background-color: #1f1f1f;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+
+/* Applies to WebKit browsers (e.g., Chrome, Edge, Safari) */
+#secondary-bar::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+  
+#secondary-bar::-webkit-scrollbar-button {
+  display: none;
+}
+
+#secondary-bar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Scrollbar track (background) */
+}
+
+#secondary-bar::-webkit-scrollbar-thumb {
+  background: #5a5a5a; /* Scrollbar thumb (the draggable part) */
+  border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+#secondary-bar::-webkit-scrollbar-thumb:hover {
+  background: #898989; /* Darker on hover */
+}
+
+/* Applies to Firefox */
+#secondary-bar {
+  scrollbar-width: 12px; /* "auto" or "thin" */
+  scrollbar-color: #5a5a5a transparent; /* thumb color and track color */
+}
+
+/* Styling for Edge and IE */
+#secondary-bar {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}  

@@ -1,6 +1,6 @@
 {
   "name": "spotify",
-  "productName": "spotify",
+  "productName": "Spotify",
   "version": "0.1.0",
   "description": "A spotify clone app made using Electron.",
   "main": ".webpack/main",
@@ -20,7 +20,6 @@
     "@electron-forge/plugin-auto-unpack-natives": "^7.6.0",
     "@electron-forge/plugin-fuses": "^7.6.0",
     "@electron-forge/plugin-webpack": "^7.6.0",
-    "@electron-forge/publisher-github": "^7.6.0",
     "@electron/fuses": "^1.8.0",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",

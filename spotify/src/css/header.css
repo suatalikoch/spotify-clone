@@ -1,0 +1,88 @@
+header {
+  display: flex;
+  padding: 0.5rem 0rem 0.5rem 1rem;
+  background-color: #000000;
+  -webkit-app-region: drag;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+#header-left {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+#header-center {
+  flex: 1;
+  justify-content: center;
+  padding-right: 1rem;
+}
+
+#header-right {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+header button, header input {
+  -webkit-app-region: no-drag;
+}
+
+#search-button {
+  background-color: #1f1f1f;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 50% 0 0 50%;
+  border-top: 1px solid transparent;
+  border-right: none;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid  transparent;
+}
+
+header input {
+  height: 42px;
+  background-color: #1f1f1f;
+  padding: 0.8rem 8rem 0.8rem 0;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+header input:hover {
+  background-color: #2a2a2a;
+  border-top: 1px solid #404040;
+  border-bottom: 1px solid #404040;
+}
+
+header input:hover ~ #search-button {
+  background-color: #2a2a2a;
+  border-top: 1px solid #404040;
+  border-left: 1px solid #404040;
+  border-bottom: 1px solid #404040;
+}
+
+header input:hover ~ #browse-button {
+  background-color: #2a2a2a;
+  border-top: 1px solid #404040;
+  border-right: 1px solid #404040;
+  border-bottom: 1px solid #404040;
+}
+
+#browse-button {
+  background-color: #1f1f1f;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 0 50% 50% 0;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: none;
+}
+
+header img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}

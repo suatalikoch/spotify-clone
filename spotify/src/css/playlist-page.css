@@ -1,0 +1,117 @@
+#content {
+  width: 100%;
+  height: calc(100vh - 9rem);
+  background-color: #121212;
+  box-sizing: border-box;
+  border-radius: 8px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0 0.5rem;
+}
+  
+#content h1 {
+  margin: 0px;
+  margin-bottom: 0.4rem;
+}
+
+#songs-container {
+  padding: 0 2rem;
+}
+
+#songs {
+  width: 100%;
+  color: #b3b3b3;
+  border-collapse: collapse;
+}
+
+#songs tr:not(:first-of-type):hover {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+}
+
+#songs h5 {
+  color: #ffffff;
+}
+
+#songs th {
+  text-align: start;
+  font-size: 14px;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #393c36;
+}
+
+#songs th:first-of-type, td:first-of-type {
+  text-align: center;
+}
+
+#songs th:last-of-type, td:last-of-type {
+  text-align: end;
+}
+
+#songs td:first-of-type {
+  border-radius: 8px 0 0 8px;
+}
+
+#songs td {
+  padding: 0.4rem 0;
+}
+
+#songs td:last-of-type {
+  border-radius: 0 8px 8px 0;
+}
+
+#songs img {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+
+#playlist-img {
+  width: 236px;
+  height: 236px;
+  border-radius: 8px;
+  margin-right: 1.4rem;
+  padding: 4rem 0 0 0;
+  object-fit: cover;
+}
+
+#profile-img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+  
+#songs h5, h6 {
+  margin: 0;
+}
+
+
+
+#content::-webkit-scrollbar-button {
+  display: none;
+}
+
+#content::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Scrollbar track (background) */
+}
+
+#content::-webkit-scrollbar-thumb {
+  background: #5a5a5a; /* Scrollbar thumb (the draggable part) */
+  border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+#content::-webkit-scrollbar-thumb:hover {
+  background: #898989; /* Darker on hover */
+}
+
+/* Applies to Firefox */
+#content {
+  scrollbar-width: 12px; /* "auto" or "thin" */
+  scrollbar-color: #5a5a5a transparent; /* thumb color and track color */
+}
+
+/* Styling for Edge and IE */
+#content {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}

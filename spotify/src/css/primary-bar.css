@@ -1,0 +1,89 @@
+#primary-bar {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 9rem);
+  padding: 1rem 0.8rem 0 0.8rem;
+  background-color: #121212;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+  
+#primary-bar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  margin-right: 0.8rem;
+}
+
+#primary-bar h4, h5 {
+  margin: 0;
+}
+
+#primary-bar h5 {
+  color: #9d9d9d;
+}
+
+#playlists {
+  flex-grow: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.playlist {
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+
+.playlist:first-of-type {
+  border-radius: 8px;
+  background-color: #2a2a2a;
+}
+
+.playlist:first-of-type:hover {
+  background-color: #484848;
+}
+
+.playlist:hover {
+  border-radius: 8px;
+  background-color: #1f1f1f;
+}
+
+
+
+/* Applies to WebKit browsers (e.g., Chrome, Edge, Safari) */
+#playlists::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+#playlists::-webkit-scrollbar-button {
+  display: none;
+}
+
+#playlists::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Scrollbar track (background) */
+}
+
+#playlists::-webkit-scrollbar-thumb {
+  background: #5a5a5a; /* Scrollbar thumb (the draggable part) */
+  border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+#playlists::-webkit-scrollbar-thumb:hover {
+  background: #898989; /* Darker on hover */
+}
+
+/* Applies to Firefox */
+#playlists {
+  scrollbar-width: 12px; /* "auto" or "thin" */
+  scrollbar-color: #5a5a5a transparent; /* thumb color and track color */
+}
+
+/* Styling for Edge and IE */
+#playlists {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+/* Applies to WebKit browsers (e.g., Chrome, Edge, Safari) */
+#playlists::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
