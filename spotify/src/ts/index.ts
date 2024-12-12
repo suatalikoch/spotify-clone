@@ -39,7 +39,7 @@ const createWindow = (): void => {
 
   mainWindow.webContents.session.webRequest.onHeadersReceived((details, callback) => {
     details.responseHeaders['Content-Security-Policy'] = [
-      'default-src \'self\'; img-src \'self\' https: data:; script-src \'self\' \'unsafe-eval\' https://kit.fontawesome.com; style-src \'self\' \'unsafe-inline\'; font-src \'self\' https://ka-f.fontawesome.com; connect-src \'self\' https://ka-f.fontawesome.com http://localhost:5500; object-src \'none\'; media-src \'self\'; frame-src \'none\';'
+      'default-src \'self\'; img-src \'self\' https: data: http://localhost:5500; script-src \'self\' \'unsafe-eval\' https://kit.fontawesome.com; style-src \'self\' \'unsafe-inline\'; font-src \'self\' https://ka-f.fontawesome.com; connect-src \'self\' https://ka-f.fontawesome.com http://localhost:5500; object-src \'none\'; media-src \'self\'; frame-src \'none\';'
     ];
     callback({ cancel: false, responseHeaders: details.responseHeaders });
   });

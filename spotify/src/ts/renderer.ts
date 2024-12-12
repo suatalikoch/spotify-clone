@@ -34,6 +34,7 @@ import '.././css/footer.css';
 
 import '.././css/browse-page.css';
 import '.././css/playlist-page.css';
+import '.././css/404.css';
 
 const minimizeButton = document.getElementById('minimize-button') as HTMLButtonElement;
 const maximizeButton = document.getElementById('maximize-button') as HTMLButtonElement;
@@ -82,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
       settings: 'http://localhost:5500/spotify/src/html/settings.html'
     }
 
-    const pageFile = pageMapping[page] || '404.html'; // Default to a 404 page
+    const pageFile = pageMapping[page] || 'http://localhost:5500/spotify/src/html/404.html'; // Default to a 404 page
 
     fetch(pageFile)
       .then((response) => {

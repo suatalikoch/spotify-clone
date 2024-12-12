@@ -1,12 +1,10 @@
 #content {
-  width: 100%;
   height: calc(100vh - 9rem);
   background-color: #121212;
   box-sizing: border-box;
   border-radius: 8px;
   overflow-x: hidden;
   overflow-y: auto;
-  margin: 0 0.5rem;
 }
   
 #content h1 {

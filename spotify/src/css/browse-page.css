@@ -1,0 +1,107 @@
+#browse-content {
+  height: calc(100vh - 9rem);
+  background-color: #121212;
+  box-sizing: border-box;
+  border-radius: 8px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.card {
+  width: 314px;
+  height: 155px;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  opacity: 0.90;
+}
+
+.card:nth-child(odd) {
+  background-color: #8c1932;
+}
+
+.card:nth-child(odd):nth-child(5n+1) {
+  background-color: #dc148c;
+}
+
+.card:nth-child(odd):nth-child(7n+3) {
+  background-color: #8400e7;
+}
+
+.card:nth-child(odd):nth-child(9n+5) {
+  background-color: #8d67ab;
+}
+
+.card:nth-child(odd):nth-child(11n+7) {
+  background-color: #e13300;
+}
+
+.card:nth-child(odd):nth-child(13n+9) {
+  background-color: #503750;
+}
+
+.card:nth-child(even) {
+  background-color: #a56752;
+}
+
+.card:nth-child(even):nth-child(3n+2) {
+  background-color: #006450;
+}
+
+.card:nth-child(even):nth-child(4n+4) {
+  background-color: #148a08;
+}
+
+.card:nth-child(even):nth-child(6n+6) {
+  background-color: #1e3264;
+}
+
+.card:nth-child(even):nth-child(8n+8) {
+  background-color: #477d95;
+}
+
+.card:nth-child(even):nth-child(10n+10) {
+  background-color: #777777;
+}
+
+.card:nth-child(even):nth-child(12n+12) {
+  background-color: #0d73ec;
+}
+
+.card h2 {
+  margin: 0;
+}
+
+
+
+#browse-content::-webkit-scrollbar-button {
+  display: none;
+}
+
+#browse-content::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Scrollbar track (background) */
+}
+
+#browse-content::-webkit-scrollbar-thumb {
+  background: #5a5a5a; /* Scrollbar thumb (the draggable part) */
+  border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+#browse-content::-webkit-scrollbar-thumb:hover {
+  background: #898989; /* Darker on hover */
+}
+
+/* Applies to Firefox */
+#browse-content {
+  scrollbar-width: 12px; /* "auto" or "thin" */
+  scrollbar-color: #5a5a5a transparent; /* thumb color and track color */
+}
+
+/* Styling for Edge and IE */
+#browse-content {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
