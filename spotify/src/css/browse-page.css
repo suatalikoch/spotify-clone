@@ -17,30 +17,30 @@
 }
 
 .card:hover {
-  opacity: 0.90;
+  opacity: 0.9;
 }
 
 .card:nth-child(odd) {
   background-color: #8c1932;
 }
 
-.card:nth-child(odd):nth-child(5n+1) {
+.card:nth-child(odd):nth-child(5n + 1) {
   background-color: #dc148c;
 }
 
-.card:nth-child(odd):nth-child(7n+3) {
+.card:nth-child(odd):nth-child(7n + 3) {
   background-color: #8400e7;
 }
 
-.card:nth-child(odd):nth-child(9n+5) {
+.card:nth-child(odd):nth-child(9n + 5) {
   background-color: #8d67ab;
 }
 
-.card:nth-child(odd):nth-child(11n+7) {
+.card:nth-child(odd):nth-child(11n + 7) {
   background-color: #e13300;
 }
 
-.card:nth-child(odd):nth-child(13n+9) {
+.card:nth-child(odd):nth-child(13n + 9) {
   background-color: #503750;
 }
 
@@ -48,35 +48,33 @@
   background-color: #a56752;
 }
 
-.card:nth-child(even):nth-child(3n+2) {
+.card:nth-child(even):nth-child(3n + 2) {
   background-color: #006450;
 }
 
-.card:nth-child(even):nth-child(4n+4) {
+.card:nth-child(even):nth-child(4n + 4) {
   background-color: #148a08;
 }
 
-.card:nth-child(even):nth-child(6n+6) {
+.card:nth-child(even):nth-child(6n + 6) {
   background-color: #1e3264;
 }
 
-.card:nth-child(even):nth-child(8n+8) {
+.card:nth-child(even):nth-child(8n + 8) {
   background-color: #477d95;
 }
 
-.card:nth-child(even):nth-child(10n+10) {
+.card:nth-child(even):nth-child(10n + 10) {
   background-color: #777777;
 }
 
-.card:nth-child(even):nth-child(12n+12) {
+.card:nth-child(even):nth-child(12n + 12) {
   background-color: #0d73ec;
 }
 
 .card h2 {
   margin: 0;
 }
-
-
 
 #browse-content::-webkit-scrollbar-button {
   display: none;

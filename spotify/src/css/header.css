@@ -19,29 +19,69 @@ header div {
   flex: 1;
   justify-content: center;
   padding-right: 1rem;
+  gap: 0.5rem;
 }
 
 #header-right {
+  display: flex;
+  align-items: center;
   flex: 1;
   justify-content: flex-end;
+  gap: 0.8232rem;
 }
 
-header button, header input {
+#header-right-start {
+  display: flex;
+  align-items: center;
+  gap: 0.8232rem;
+}
+
+#header-right-end {
+  display: flex;
+  align-items: center;
+}
+
+header button,
+header input {
   -webkit-app-region: no-drag;
+}
+
+#header-home-button {
+  width: 42px;
+  height: 42px;
+  background-color: #1f1f1f;
+  color: #b3b3b3;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: scale 0.1s ease;
+}
+
+#header-home-button:hover {
+  scale: 1.05;
 }
 
 #search-button {
   background-color: #1f1f1f;
-  color: white;
-  padding: 0.8rem;
+  color: #b3b3b3;
+  padding: 0.7rem;
   border-radius: 50% 0 0 50%;
   border-top: 1px solid transparent;
   border-right: none;
   border-bottom: 1px solid transparent;
-  border-left: 1px solid  transparent;
+  border-left: 1px solid transparent;
 }
 
-header input {
+#search-button:hover {
+  color: #ffffff;
+}
+
+#header-search-container {
+  display: flex;
+  align-items: center;
+}
+
+#header-search-container input {
   height: 42px;
   background-color: #1f1f1f;
   padding: 0.8rem 8rem 0.8rem 0;
@@ -50,20 +90,20 @@ header input {
   font-weight: bold;
 }
 
-header input:hover {
+#header-search-container input:hover {
   background-color: #2a2a2a;
   border-top: 1px solid #404040;
   border-bottom: 1px solid #404040;
 }
 
-header input:hover ~ #search-button {
+#header-search-container input:hover ~ #search-button {
   background-color: #2a2a2a;
   border-top: 1px solid #404040;
   border-left: 1px solid #404040;
   border-bottom: 1px solid #404040;
 }
 
-header input:hover ~ #browse-button {
+#header-search-container input:hover ~ #browse-button {
   background-color: #2a2a2a;
   border-top: 1px solid #404040;
   border-right: 1px solid #404040;
@@ -72,8 +112,8 @@ header input:hover ~ #browse-button {
 
 #browse-button {
   background-color: #1f1f1f;
-  color: white;
-  padding: 0.8rem;
+  color: #b3b3b3;
+  padding: 0.7rem;
   border-radius: 0 50% 50% 0;
   border-top: 1px solid transparent;
   border-right: 1px solid transparent;
@@ -81,8 +121,36 @@ header input:hover ~ #browse-button {
   border-left: none;
 }
 
+#browse-button:hover {
+  color: #ffffff;
+}
+
+#browse-button i {
+  transition: scale 0.1s ease;
+}
+
+#browse-button i:hover {
+  scale: 1.05;
+}
+
+#profile-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: #1f1f1f;
+  transition: scale 0.1s ease;
+}
+
+#profile-button:hover {
+  scale: 1.05;
+}
+
 header img {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
 }

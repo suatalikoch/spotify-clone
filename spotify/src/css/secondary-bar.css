@@ -2,15 +2,28 @@
   display: flex;
   flex-direction: column;
   height: calc(100vh - 9rem);
-  padding: 1rem 1rem 0 1rem;
   background-color: #121212;
   border-radius: 8px;
   box-sizing: border-box;
 }
 
+#secondary-bar-header {
+  padding: 1rem;
+}
+
+#secondary-bar-header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
 #secondary-bar-content {
+  display: flex;
+  flex-direction: column;
   overflow-x: hidden;
   overflow-y: auto;
+  padding: 0 0 1rem 1rem;
+  gap: 1rem;
 }
 
 #song-img {
@@ -33,6 +46,11 @@
   border-radius: 8px;
 }
 
+#about-card {
+  display: flex;
+  flex-direction: column;
+}
+
 #about-artist {
   background-color: #1f1f1f;
   padding: 1rem;
@@ -40,23 +58,35 @@
 }
 
 #credits {
+  display: flex;
+  flex-direction: column;
   background-color: #1f1f1f;
-  padding: 1rem;
   border-radius: 8px;
+  padding: 1rem;
+  gap: 1rem;
 }
 
 #queue {
   background-color: #1f1f1f;
-  padding: 1rem;
   border-radius: 8px;
+  padding-bottom: 0.5rem;
 }
 
+#queue-next {
+  border-radius: 8px;
+  margin: 0 0.5rem 0 0.5rem;
+  padding: 0.5rem;
+}
+
+#queue-next:hover {
+  background-color: #3f3f3f;
+}
 
 /* Applies to WebKit browsers (e.g., Chrome, Edge, Safari) */
 #secondary-bar::-webkit-scrollbar {
   width: 12px; /* Width of the scrollbar */
 }
-  
+
 #secondary-bar::-webkit-scrollbar-button {
   display: none;
 }
@@ -83,4 +113,4 @@
 /* Styling for Edge and IE */
 #secondary-bar {
   -ms-overflow-style: -ms-autohiding-scrollbar;
-}  
+}

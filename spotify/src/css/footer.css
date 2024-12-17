@@ -1,5 +1,6 @@
 footer {
   display: flex;
+  align-items: center;
   padding: 1rem;
   background-color: #000000;
 }
@@ -9,11 +10,26 @@ footer {
   align-items: center;
   flex: 1;
   justify-content: flex-start;
+  gap: 0.7rem;
+}
+
+#footer-left-start {
+  display: flex;
+  align-items: center;
 }
 
 #footer-center {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   justify-content: center;
+  gap: 0.5rem;
+}
+
+#footer-center-top {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 #footer-right {
@@ -21,13 +37,22 @@ footer {
   align-items: center;
   flex: 1;
   justify-content: flex-end;
+  gap: 0.2rem;
 }
 
 footer img {
   width: 56px;
   height: 56px;
   border-radius: 8px;
-  margin-right: 16px;
+  margin-right: 1rem;
+}
+
+#footer-play-button {
+  width: 2rem;
+  height: 2rem;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 50%;
 }
 
 footer input[type="range"]:nth-child(2) {
@@ -59,10 +84,19 @@ footer input[type="range"]::-webkit-slider-thumb {
   transition: background 0.3s ease;
 }
 
-#song-slider {
+#footer-center-bottom {
+  display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 0.3rem;
 }
 
-#song-slider p {
+#footer-center-bottom p {
   margin: 0;
+}
+
+#sound-slider {
+  display: flex;
+  align-items: center;
+  margin: 0 0.3rem;
 }
