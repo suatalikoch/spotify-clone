@@ -27,15 +27,22 @@
       </div>
       <div id="header-center">
         <button id="header-home-button" data-page="home">
-          <i class="fa fa-home size-18"></i>
+          <i class="fa fa-home size-18" data-page="home"></i>
         </button>
         <div id="header-search-container">
-          <button id="search-button" class="pointer">
-            <i class="fa fa-search size-18"></i>
+          <button id="search-button" class="pointer" data-page="unknown">
+            <i class="fa fa-search size-18" data-page="unknown"></i>
           </button>
-          <input type="search" placeholder="What do you want to play?" />
+          <input
+            id="search-bar"
+            type="search"
+            placeholder="What do you want to play?"
+          />
+          <div id="search-bar-separator-container">
+            <div id="search-bar-separator"></div>
+          </div>
           <button id="browse-button" class="pointer" data-page="browse">
-            <i class="fa fa-bars size-18"></i>
+            <i class="fa fa-bars size-18" data-page="browse"></i>
           </button>
         </div>
       </div>
@@ -74,13 +81,10 @@
         <div id="primary-bar-header">
           <div id="primary-bar-header-container">
             <div id="primary-bar-header-left">
-              <button
-                id="primary-bar-collapse-button"
-                class="content-playlist-button-search"
-              >
+              <button id="primary-bar-collapse-button">
                 <i class="fa fa-caret-down size-20"></i>
+                Your Library
               </button>
-              <h4 class="color-gray collapsable">Your Library</h4>
             </div>
             <div id="primary-bar-header-right">
               <button class="content-playlist-button-search collapsable">
@@ -110,10 +114,15 @@
           </div>
           <div class="flex align-center playlist" data-page="playlist">
             <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
+              <div id="playlists-playlist-image-container">
+                <img
+                  src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
+                  alt="Playlist Image"
+                />
+                <div id="playlists-playlist-image-overlay">
+                  <i class="fa fa-pause"></i>
+                </div>
+              </div>
               <div>
                 <h4 class="color-lime collapsable">Liked Songs</h4>
                 <div class="flex align-center">
@@ -125,246 +134,6 @@
               </div>
             </div>
             <i class="fa fa-volume-high size-13 color-lime collapsable"></i>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
-          </div>
-          <div class="flex align-center playlist" data-page="playlist">
-            <div class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                alt="Playlist Image"
-              />
-              <div>
-                <h4 class="collapsable">Liked Songs</h4>
-                <h5 class="collapsable">Playlists · suatalikoch</h5>
-              </div>
-            </div>
           </div>
         </div>
       </aside>
@@ -418,17 +187,26 @@
               </div>
             </div>
             <div>
+              <button id="copy-link-button" class="content-playlist-button">
+                <i class="fa fa-arrow-up-from-bracket size-18"></i>
+              </button>
               <button class="content-playlist-button">
-                <i class="fa fa-circle-plus size-16"></i>
+                <i class="fa fa-circle-check color-lime size-18"></i>
               </button>
             </div>
           </div>
           <div id="about-card">
-            <img
-              src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-              id="artist-img"
-              alt="Artists Picture"
-            />
+            <h4 id="about-the-artist-text" class="color-white bold">
+              About the artist
+            </h4>
+            <div id="about-artist-container">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
+                id="artist-img"
+                alt="Artists Picture"
+              />
+              <div id="artist-img-overlay"></div>
+            </div>
             <div id="about-artist">
               <a href="#" class="size-16 color-white bold anchor"
                 >Truth Hurts</a
@@ -439,16 +217,37 @@
                 </h6>
                 <button class="follow-button">Follow</button>
               </div>
-              <p class="size-14 color-gray margin-0">
-                Truth Hurts launched onto the music scene in grand<br />fashion
-                with her debut album "Truthfully Speaking" on<br />Dr. Dre's
-                Aftermath label. Globally celebrated for her fir...
+              <p id="artist-description">
+                Truth Hurts launched onto the music scene in grand fashion with
+                her debut album "Truthfully Speaking" on Dr. Dre's Aftermath
+                label. Globally celebrated for her first single appropriately
+                titled "Addictive", Truth topped the 2002 music charts in 14
+                countries and garnered two Grammy nominations. With heavy
+                rotation in radio and music television, she toured with Dr. Dre
+                and Snoop Dogg on the Up in Smoke Tour. Shortly after, she
+                toured with Lauryn Hill and Outkast, on The Smoking Grooves
+                Tour. Truth's Operatic and Theatrical training began at the
+                tender age of 10 and introduced her to a love for acting. She
+                has numerous film and television credits under her belt,
+                including roles in films "Security" alongside Antonio Banderas,
+                "211" alongside Nicolas Cage, and the television series "The
+                Parkers". In 2004, Truth Hurts released her sophomore album,
+                "Ready Now" on Raphael Saadiq's Label, Pookie Entertainment. She
+                continued performing and touring, returning in the screen in
+                2007 appearing in "Marigold", musical revue "I can't Stop Loving
+                You" and "Genius of Ray Charles" portraying "Maryanne" of the
+                Raelettes, Charles famed back up vocalists. Her new single "RnB
+                Love" is the newest release from the upcoming She-P (EP)
+                entitled #revelations which will be released October 10th. Fans
+                can expect an unapologetic yet completely relationship WOKE
+                Truth as she journeys back to the truth and #revelations based
+                on female empowerment and enlightenment.
               </p>
             </div>
           </div>
           <div id="credits">
             <div class="space-between align-center">
-              <h4 class="margin-0">Credits</h4>
+              <h4 class="margin-0 color-white">Credits</h4>
               <a href="#" class="link">Show All</a>
             </div>
             <div class="space-between align-center">
@@ -476,21 +275,36 @@
           </div>
           <div id="queue">
             <div class="space-between align-center padding-1">
-              <h4 class="margin-0">Next in queue</h4>
+              <h4 class="margin-0 color-white">Next in queue</h4>
               <a href="#" class="link">Open queue</a>
             </div>
-            <div id="queue-next" class="flex align-center">
-              <img
-                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-                id="next-song-img"
-                alt="Song Picture"
-                style="margin-right: 12px"
-              />
+            <div id="queue-next">
+              <div id="queue-next-image-container">
+                <img
+                  src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
+                  id="next-song-img"
+                  alt="Song Picture"
+                />
+                <div id="queue-next-image-overlay"></div>
+                <i class="fa fa-play color-white"></i>
+              </div>
               <div>
-                <h4 class="margin-0 normal">Love You Like A Love Song</h4>
-                <a href="#" class="color-gray size-14 anchor">
-                  Music video · Selena Gomez & The S...
+                <h4 class="margin-0 normal color-white">
+                  Love You Like A Love Song
+                </h4>
+                <a
+                  href="#"
+                  id="queue-next-anchor"
+                  class="color-gray size-14 anchor"
+                >
+                  Music video · Selena Gomez & The Scene
                 </a>
+              </div>
+              <div>
+                <i
+                  id="queue-next-ellipsis"
+                  class="fa fa-ellipsis color-gray"
+                ></i>
               </div>
             </div>
           </div>
@@ -502,15 +316,19 @@
     <footer>
       <div id="footer-left">
         <div id="footer-left-start">
-          <img
-            src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
-            alt="Song Picture"
-          />
-          <div>
+          <div id="footer-left-start-container">
+            <img
+              id="footer-image"
+              src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
+              alt="Song Picture"
+            />
+            <i id="footer-image-collapse" class="fa fa-chevron-down"></i>
+          </div>
+          <div id="footer-song-details">
             <a href="#" class="color-white no-wrap size-14 bold anchor"
               >Addictive</a
             >
-            <div>
+            <div id="footer-song-authors">
               <a href="#" class="color-gray no-wrap size-12 anchor"
                 >Truth Hurts</a
               ><span class="color-gray no-wrap">,</span>
@@ -519,7 +337,7 @@
           </div>
         </div>
         <button class="content-playlist-button">
-          <i class="fa fa-circle-plus size-16"></i>
+          <i class="fa fa-circle-check size-16 color-lime"></i>
         </button>
       </div>
       <div id="footer-center">
@@ -530,7 +348,7 @@
           <button class="content-playlist-button">
             <i class="fa fa-backward-step size-18"></i>
           </button>
-          <button id="footer-play-button" class="content-playlist-button">
+          <button id="footer-play-button">
             <i class="fa fa-play size-18"></i>
           </button>
           <button class="content-playlist-button">
@@ -553,8 +371,16 @@
             class="fa-solid fa-expand size-16 color-lime"
           ></i>
         </button>
-        <button class="content-playlist-button">
-          <i class="fa fa-microphone-lines size-16"></i>
+        <button
+          id="lyrics-button"
+          class="content-playlist-button"
+          data-page="lyrics"
+        >
+          <i
+            id="lyrics"
+            class="fa fa-microphone-lines size-16"
+            data-page="lyrics"
+          ></i>
         </button>
         <button class="content-playlist-button">
           <i class="fa fa-grip-lines size-16"></i>

@@ -1,10 +1,12 @@
 #primary-bar {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 9rem);
-  background-color: #121212;
-  border-radius: 8px;
   box-sizing: border-box;
+  width: 35.3rem;
+  min-width: 17.55rem;
+  height: 100%;
+  border-radius: 8px;
+  background-color: var(--secondary-color);
 }
 
 #primary-bar-header {
@@ -19,22 +21,40 @@
 }
 
 #primary-bar-header-left {
-  display: flex;
   gap: 0.85rem;
+  display: flex;
   align-items: center;
   cursor: pointer;
 }
 
-#primary-bar-header-right {
+#primary-bar-collapse-button {
+  gap: 1.2rem;
   display: flex;
+  align-items: center;
+  border: none;
+  color: var(--sub-color);
+  font-weight: bolder;
+  font-size: 0.96rem;
+  cursor: pointer;
+  background-color: transparent;
+  transition: color 0.2s ease;
+}
+
+#primary-bar-collapse-button:hover {
+  color: var(--color);
+}
+
+#primary-bar-header-right {
   gap: 0.5rem;
+  display: flex;
   align-items: center;
 }
 
 #playlist-filter {
+  gap: 8px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  overflow: hidden;
 }
 
 #playlist-filter button {
@@ -42,17 +62,17 @@
 }
 
 .playlist-button {
-  background-color: #2a2a2a;
-  color: #ffffff;
-  border: none;
   padding: 0.5rem 0.8rem;
+  border: none;
   border-radius: 16px;
+  color: var(--color);
   cursor: pointer;
+  background-color: var(--tertiary-color);
   transition: background-color 0.1s ease;
 }
 
 .playlist-button:hover {
-  background-color: #333333;
+  background-color: var(--septenary-color);
 }
 
 #bottom-header {
@@ -60,10 +80,8 @@
 }
 
 #primary-bar img {
-  width: 50px;
-  height: 50px;
+  width: 100%;
   border-radius: 8px;
-  margin-right: 0.8rem;
 }
 
 #primary-bar h4,
@@ -72,36 +90,68 @@ h5 {
 }
 
 #primary-bar h5 {
-  color: #9d9d9d;
+  color: var(--secondary-sub-color);
 }
 
 #playlists {
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
+  flex-direction: column;
+  padding: 0.5rem;
   overflow-x: hidden;
   overflow-y: auto;
-  padding: 0.5rem;
 }
 
 .playlist {
-  cursor: pointer;
-  padding: 0.5rem;
   justify-content: space-between;
+  padding: 0.5rem;
+  cursor: pointer;
 }
 
 .playlist:nth-child(2) {
   border-radius: 8px;
-  background-color: #2a2a2a;
+  background-color: var(--tertiary-color);
 }
 
 .playlist:nth-of-type(2):hover {
-  background-color: #484848;
+  background-color: var(--senary-color);
 }
 
 .playlist:hover {
   border-radius: 8px;
-  background-color: #1f1f1f;
+  background-color: var(--secondary-highlight-color);
+}
+
+.playlist:hover #playlists-playlist-image-overlay {
+  opacity: 1;
+}
+
+#playlists-playlist-image-container {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin-right: 0.8rem;
+}
+
+#playlists-playlist-image-overlay {
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background-color: rgb(0, 0, 0, 0.25);
+  transition: opacity 0.2s ease;
+}
+
+#playlists-playlist-image-overlay i {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .thumbtack {
@@ -118,22 +168,22 @@ h5 {
 }
 
 #playlists::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Scrollbar track (background) */
+  background-color: #f1f1f1; /* Scrollbar track (background) */
 }
 
 #playlists::-webkit-scrollbar-thumb {
-  background: #5a5a5a; /* Scrollbar thumb (the draggable part) */
-  border-radius: 6px; /* Rounded corners for the thumb */
+  border-radius: 6px; /* Scrollbar thumb (the draggable part) */
+  background-color: var(--scroll-color); /* Rounded corners for the thumb */
 }
 
 #playlists::-webkit-scrollbar-thumb:hover {
-  background: #898989; /* Darker on hover */
+  background-color: #898989; /* Darker on hover */
 }
 
 /* Applies to Firefox */
 #playlists {
-  scrollbar-width: 12px; /* "auto" or "thin" */
-  scrollbar-color: #5a5a5a transparent; /* thumb color and track color */
+  scrollbar-color: var(--scroll-color) transparent; /* "auto" or "thin" */
+  scrollbar-width: 12px; /* thumb color and track color */
 }
 
 /* Styling for Edge and IE */

@@ -1,10 +1,16 @@
 #secondary-bar {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 9rem);
-  background-color: #121212;
-  border-radius: 8px;
   box-sizing: border-box;
+  max-width: 26.15rem;
+  height: 100%;
+  border-radius: 8px;
+  background-color: var(--secondary-color);
+}
+
+#secondary-bar:hover #copy-link-button {
+  opacity: 1;
+  transform: translateX(0%);
 }
 
 #secondary-bar-header {
@@ -12,74 +18,184 @@
 }
 
 #secondary-bar-header-right {
+  gap: 0.6rem;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
 }
 
 #secondary-bar-content {
+  gap: 1rem;
   display: flex;
   flex-direction: column;
+  padding: 0 0 1rem 1rem;
   overflow-x: hidden;
   overflow-y: auto;
-  padding: 0 0 1rem 1rem;
-  gap: 1rem;
 }
 
 #song-img {
-  width: 400px;
-  height: 400px;
   object-fit: cover;
   border-radius: 8px;
+  cursor: pointer;
+}
+
+#copy-link-button {
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: translateX(50%);
+}
+
+#about-artist-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
 }
 
 #artist-img {
-  width: 400px;
-  height: 300px;
+  aspect-ratio: 16 / 10.4;
   object-fit: cover;
+  width: 100%;
   border-radius: 8px 8px 0 0;
 }
 
-#next-song-img {
-  width: 50px;
-  height: 50px;
-  border-radius: 8px;
+#artist-img-overlay {
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgb(0, 0, 0, 0.05) 50%);
 }
 
 #about-card {
   display: flex;
+  position: relative;
   flex-direction: column;
+  cursor: pointer;
+}
+
+#about-the-artist-text {
+  z-index: 2;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  margin: 0;
 }
 
 #about-artist {
-  background-color: #1f1f1f;
   padding: 1rem;
   border-radius: 0 0 8px 8px;
+  background-color: var(--card-color);
+}
+
+#artist-description {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  color: var(--sub-color);
+  font-size: 0.875rem;
 }
 
 #credits {
+  gap: 1rem;
   display: flex;
   flex-direction: column;
-  background-color: #1f1f1f;
-  border-radius: 8px;
   padding: 1rem;
-  gap: 1rem;
+  border-radius: 8px;
+  background-color: var(--card-color);
 }
 
 #queue {
-  background-color: #1f1f1f;
-  border-radius: 8px;
   padding-bottom: 0.5rem;
+  border-radius: 8px;
+  background-color: var(--card-color);
 }
 
 #queue-next {
-  border-radius: 8px;
+  gap: 0.75rem;
+  display: flex;
+  align-items: center;
   margin: 0 0.5rem 0 0.5rem;
   padding: 0.5rem;
+  border-radius: 8px;
 }
 
 #queue-next:hover {
-  background-color: #3f3f3f;
+  cursor: pointer;
+  background-color: var(--second-color);
+}
+
+#queue-next:hover #queue-next-ellipsis,
+#queue-next:hover #queue-next-image-overlay,
+#queue-next:hover #queue-next-image-container i {
+  opacity: 1;
+}
+
+#queue-next:hover #queue-next-anchor {
+  color: var(--color);
+}
+
+#queue-next-image-container {
+  position: relative;
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+#next-song-img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+}
+
+#queue-next-image-container i {
+  display: flex;
+  opacity: 0;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.2s ease;
+}
+
+#queue-next-image-overlay {
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background-color: rgb(0, 0, 0, 0.25);
+  transition: opacity 0.2s ease;
+}
+
+#queue-next-anchor {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  display: -webkit-box;
+  width: 100%;
+  overflow: hidden;
+}
+
+#queue-next-ellipsis {
+  opacity: 0;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+#queue-next-ellipsis:hover {
+  opacity: 1;
+  color: var(--color);
 }
 
 /* Applies to WebKit browsers (e.g., Chrome, Edge, Safari) */
@@ -92,22 +208,22 @@
 }
 
 #secondary-bar::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Scrollbar track (background) */
+  background-color: #f1f1f1; /* Scrollbar track (background) */
 }
 
 #secondary-bar::-webkit-scrollbar-thumb {
-  background: #5a5a5a; /* Scrollbar thumb (the draggable part) */
-  border-radius: 6px; /* Rounded corners for the thumb */
+  border-radius: 6px; /* Scrollbar thumb (the draggable part) */
+  background-color: var(--scroll-color); /* Rounded corners for the thumb */
 }
 
 #secondary-bar::-webkit-scrollbar-thumb:hover {
-  background: #898989; /* Darker on hover */
+  background-color: #898989; /* Darker on hover */
 }
 
 /* Applies to Firefox */
 #secondary-bar {
-  scrollbar-width: 12px; /* "auto" or "thin" */
-  scrollbar-color: #5a5a5a transparent; /* thumb color and track color */
+  scrollbar-color: var(--scroll-color) transparent; /* "auto" or "thin" */
+  scrollbar-width: 12px; /* thumb color and track color */
 }
 
 /* Styling for Edge and IE */

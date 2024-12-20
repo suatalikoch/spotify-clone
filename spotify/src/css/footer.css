@@ -1,16 +1,18 @@
 footer {
   display: flex;
   align-items: center;
+  box-sizing: border-box;
+  height: 84px;
   padding: 1rem;
-  background-color: #000000;
+  background-color: var(--primary-color);
 }
 
 #footer-left {
+  gap: 0.7rem;
   display: flex;
-  align-items: center;
   flex: 1;
   justify-content: flex-start;
-  gap: 0.7rem;
+  align-items: center;
 }
 
 #footer-left-start {
@@ -18,59 +20,117 @@ footer {
   align-items: center;
 }
 
-#footer-center {
+#footer-left-start-container {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  margin-right: 1rem;
+}
+
+#footer-image {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border-radius: 8px;
+}
+
+#footer-image:hover ~ #footer-image-collapse {
+  opacity: 1;
+}
+
+#footer-image-collapse {
   display: flex;
-  flex-direction: column;
-  flex: 1;
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
   justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgb(0, 0, 0, 0.6);
+  transition: background-color 0.1s ease, scale 0.1s ease, opacity 0.2s ease;
+}
+
+#footer-image-collapse:hover {
+  scale: 1.1;
+  opacity: 1;
+  background-color: rgb(0, 0, 0, 0.8);
+}
+
+#footer-center {
   gap: 0.5rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #footer-center-top {
+  gap: 1rem;
   display: flex;
   justify-content: center;
-  gap: 1rem;
 }
 
 #footer-right {
+  gap: 0.2rem;
   display: flex;
-  align-items: center;
   flex: 1;
   justify-content: flex-end;
-  gap: 0.2rem;
+  align-items: center;
 }
 
-footer img {
-  width: 56px;
-  height: 56px;
-  border-radius: 8px;
-  margin-right: 1rem;
+#footer-song-details {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#footer-song-authors {
+  animation: slide-left-right 10s ease-in-out infinite;
+}
+
+#footer-song-authors a:hover {
+  color: var(--color);
 }
 
 #footer-play-button {
   width: 2rem;
   height: 2rem;
-  background-color: #ffffff;
-  color: #000000;
+  border: none;
   border-radius: 50%;
+  color: var(--primary-color);
+  cursor: pointer;
+  background-color: var(--color);
+  transition: background-color 0.1s ease, scale 0.1s ease;
+}
+
+#footer-play-button:hover {
+  scale: 1.05;
+  background-color: #ebebeb;
 }
 
 footer input[type="range"]:nth-child(2) {
-  width: 600px;
+  width: 100%;
+  min-width: 13.6rem;
+  max-width: 39rem;
 }
 
 footer input[type="range"]:nth-child(1) {
-  width: 100px;
+  width: 100%;
+  min-width: 1.5rem;
+  max-width: 6rem;
 }
 
 footer input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
   height: 4px;
-  background: #4d4d4d;
   border-radius: 5px;
   outline: none;
-  transition: background 0.3s ease;
+  background-color: #4d4d4d;
+  transition: background-color 0.3s ease;
 }
 
 footer input[type="range"]::-webkit-slider-thumb {
@@ -78,17 +138,17 @@ footer input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 12px;
   height: 12px;
-  background: #ffffff;
   border-radius: 50%;
   cursor: pointer;
-  transition: background 0.3s ease;
+  background-color: var(--color);
+  transition: background-color 0.3s ease;
 }
 
 #footer-center-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #footer-center-bottom p {
@@ -99,4 +159,16 @@ footer input[type="range"]::-webkit-slider-thumb {
   display: flex;
   align-items: center;
   margin: 0 0.3rem;
+}
+
+@keyframes slide-left-right {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }

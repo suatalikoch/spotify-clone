@@ -1,16 +1,87 @@
 #content {
   position: relative;
-  height: calc(100vh - 9rem);
-  background-color: #121212;
   box-sizing: border-box;
+  height: 100%;
   border-radius: 8px;
   overflow-x: hidden;
   overflow-y: auto;
+  background-color: var(--secondary-color);
 }
 
-#content h1 {
-  margin: 0px;
-  margin-bottom: 0.4rem;
+#playlist-top {
+  background: var(--primary-gradient);
+}
+
+#playlist-image-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: end;
+  max-width: 14.75rem;
+  max-height: 14.75rem;
+  margin: 4rem 1.4rem 0 0;
+}
+
+#playlist-image-overlay {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 8px;
+  background-color: rgb(0, 0, 0, 0.5);
+  transition: opacity 0.2s ease;
+}
+
+#playlist-image-overlay:hover {
+  opacity: 1;
+}
+
+#playlist-image-overlay i {
+  margin-bottom: 0.1rem;
+  font-size: 2rem;
+}
+
+#playlist-image-overlay h4 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+#playlist-img {
+  object-fit: cover;
+  width: 100%;
+  min-width: 8rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-color);
+}
+
+#playlist-play-button {
+  width: 54px;
+  min-width: 54px;
+  height: 54px;
+  min-height: 54px;
+  border: none;
+  border-radius: 50%;
+  color: var(--primary-color);
+  background-color: var(--primary-accent-color);
+}
+
+#playlist-play-button:hover {
+  background-color: var(--secondary-accent-color);
+}
+
+#playlist-bottom {
+  background: var(--secondary-gradient);
+}
+
+#playlist-bottom-header {
+  padding: 1.4rem;
 }
 
 #songs-container {
@@ -19,35 +90,139 @@
 
 #songs {
   width: 100%;
-  color: #b3b3b3;
   border-collapse: collapse;
+  color: var(--sub-color);
 }
 
-#songs tr:not(:first-of-type):hover {
-  background-color: #1f1f1f;
-  border-radius: 8px;
+.column-title-container {
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
 }
 
-#songs h5 {
-  font-size: 14px;
+#first-column-title {
+  margin-left: 1.125rem;
+}
+
+#last-column-title {
+  justify-content: end;
+}
+
+.songs-column-title {
   margin: 0;
+  color: var(--sub-color);
+  transition: color 0.2s ease;
+}
+
+.songs-column-title:hover {
+  color: var(--color);
+}
+
+.song:hover {
+  border-radius: 8px;
+  background-color: var(--highlight-color);
+}
+
+.song:hover .song-authors a,
+.song:hover .song-album {
+  color: var(--color);
+}
+
+.song-title {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  display: -webkit-box;
+  margin: 0;
+  overflow: hidden;
+  color: var(--color);
+  font-size: 14px;
+}
+
+.song-authors {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
+.song-authors a {
+  transition: color 0.2s ease;
+}
+
+.song-album {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  display: -webkit-box;
+  width: fit-content;
+  overflow: hidden;
+  color: var(--sub-color);
+  font-size: 0.8125rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.song-album:hover {
+  text-decoration: underline;
 }
 
 #songs th {
-  text-align: start;
-  font-size: 14px;
   padding: 0.4rem 0;
-  border-bottom: 1px solid #393c36;
+  border-bottom: 1px solid var(--nonary-color);
+  font-size: 14px;
+}
+
+#first-column {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+#first-column i {
+  display: none;
+  color: var(--color);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
 }
 
 #songs th:first-of-type,
-td:first-of-type {
+#songs td:first-of-type {
   text-align: right;
 }
 
-#songs th:last-of-type,
-td:last-of-type {
-  text-align: end;
+.last-row {
+  text-align: right;
+}
+
+#songs td:last-of-type {
+  text-align: center;
+}
+
+#songs th:nth-child(1) {
+  width: 1.8%;
+}
+
+#songs th:nth-child(2) {
+  width: 42%;
+}
+
+#songs th:nth-child(3) {
+  width: 28%;
+}
+
+#songs th:nth-child(4) {
+  width: 23.2%;
+}
+
+#songs th:nth-child(5) {
+  width: 3%;
+}
+
+#songs th:nth-child(6) {
+  width: 2%;
 }
 
 #songs td:first-of-type {
@@ -62,20 +237,47 @@ td:last-of-type {
   border-radius: 0 8px 8px 0;
 }
 
+#songs td:last-of-type i,
+#songs td:nth-last-of-type(3) i {
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+#songs tr:hover i {
+  opacity: 1;
+}
+
+#songs tr:hover #first-column i {
+  display: flex;
+}
+
+#songs tr:hover #first-column p {
+  display: none;
+}
+
 #songs img {
   width: 42px;
   height: 42px;
+  margin-right: 0.75rem;
+  margin-left: 1.125rem;
   border-radius: 8px;
-  margin-left: 1.4rem;
-  margin-right: 12px;
 }
 
-#playlist-img {
-  width: 236px;
-  height: 236px;
-  border-radius: 8px;
-  margin: 4rem 1.4rem 0 0;
-  object-fit: cover;
+#playlist-title {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  font-weight: 800;
+  font-size: 88px;
+  line-height: 6rem;
+}
+
+#playlist-details {
+  gap: 0.25rem;
+  display: flex;
+  align-items: center;
+  min-width: 15.625rem;
+  margin-top: 0.65rem;
 }
 
 #profile-img {
@@ -85,31 +287,31 @@ td:last-of-type {
 }
 
 #song-detail {
+  gap: 0.3rem;
   display: flex;
   align-items: center;
-  gap: 0.3rem;
 }
 
 #video-icon-background {
-  width: 1rem;
-  height: 1rem;
-  background-color: #b3b3b3;
-  border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #121212;
-  font-size: 11px;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 2px;
+  color: var(--secondary-color);
   font-weight: bold;
+  font-size: 11px;
+  background-color: var(--sub-color);
 }
 
 #play-square-icon-background {
-  width: 0.8rem;
-  height: 0.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #b3b3b3;
+  width: 0.8rem;
+  height: 0.6rem;
+  border: 2px solid var(--sub-color);
   border-radius: 2px;
 }
 
@@ -122,22 +324,22 @@ td:last-of-type {
 }
 
 #content::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Scrollbar track (background) */
+  background-color: #f1f1f1; /* Scrollbar track (background) */
 }
 
 #content::-webkit-scrollbar-thumb {
-  background: #5a5a5a; /* Scrollbar thumb (the draggable part) */
-  border-radius: 6px; /* Rounded corners for the thumb */
+  border-radius: 6px; /* Scrollbar thumb (the draggable part) */
+  background-color: var(--scroll-color); /* Rounded corners for the thumb */
 }
 
 #content::-webkit-scrollbar-thumb:hover {
-  background: #898989; /* Darker on hover */
+  background-color: #898989; /* Darker on hover */
 }
 
 /* Applies to Firefox */
 #content {
-  scrollbar-width: 12px; /* "auto" or "thin" */
-  scrollbar-color: #5a5a5a transparent; /* thumb color and track color */
+  scrollbar-color: var(--scroll-color) transparent; /* "auto" or "thin" */
+  scrollbar-width: 12px; /* thumb color and track color */
 }
 
 /* Styling for Edge and IE */

@@ -1,12 +1,42 @@
+:root {
+  --alert-color: #c42b1c;
+  --card-color: #1f1f1f;
+  --color: #ffffff;
+  --highlight-color: rgb(255, 255, 255, 0.10);
+  --nonary-color: #393c36;
+  --octonary-color: #404040;
+  --primary-accent-color: #1ed760;
+  --primary-color: #000000;
+  --primary-gradient: linear-gradient(to bottom, #8d9b77, #4c5441);
+  --quaternary-color: #7c7c7c;
+  --quintary-color: #1c1c1c;
+  --scroll-color: #5a5a5a;
+  --scroll-shadow-color: 0 4px 10px 1px rgba(0, 0, 0, 0.5);
+  --second-color: #3f3f3f;
+  --secondary-accent-color: #3ae176;
+  --secondary-color: #121212;
+  --secondary-gradient: linear-gradient(to bottom, #3d4334 0%, var(--secondary-color) 15%);
+  --secondary-highlight-color: rgb(255, 255, 255, 0.055);
+  --secondary-sub-color: #9d9d9d;
+  --senary-color: #484848;
+  --septenary-color: #333333;
+  --shadow-color: 0 2px 16px 0.1px rgb(0, 0, 0, 0.5);
+  --sub-color: #b3b3b3;
+  --tertiary-accent-color: red;
+  --tertiary-color: #2a2a2a;
+}
+
 body {
+  margin: auto;
+  overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
-  margin: auto;
   user-select: none;
-  overflow: hidden;
+  background-color: var(--primary-color);
 }
 
 section {
+  height: calc(100vh - 148px);
   margin: 0 0.5rem;
 }
 
@@ -16,7 +46,7 @@ section {
   justify-content: center;
   align-items: center;
   width: 9px;
-  height: calc(100vh - 9rem);
+  height: 100%;
 }
 
 #left-splitter:hover,
@@ -25,11 +55,11 @@ section {
 }
 
 #left-splitter:hover #left-separator {
-  border-left: 1px solid #7c7c7c;
+  border-left: 1px solid var(--quaternary-color);
 }
 
 #right-splitter:hover #right-separator {
-  border-left: 1px solid #7c7c7c;
+  border-left: 1px solid var(--quaternary-color);
 }
 
 #left-separator,
@@ -41,24 +71,124 @@ section {
 
 #page {
   width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1960px) {
+  #playlist-title {
+    font-size: 3.25rem !important;
+    line-height: 5rem !important;
+  }
+}
+
+@media only screen and (max-width: 1630px) {
+  #playlist-title {
+    font-size: 2rem !important;
+    line-height: 4rem !important;
+  }
+}
+
+@media only screen and (max-width: 1448px) {
+  #playlist-title {
+    font-size: 1.25rem !important;
+    line-height: 3rem !important;
+  }
+
+  #songs th:nth-of-type(4), #songs td:nth-of-type(4) {
+    display: none;
+  }
+
+  #playlist-details {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  #songs th:nth-of-type(3), #songs td:nth-of-type(3) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #primary-bar {
+    width: 100px;
+    min-width: 100px !important;
+  }
+
+  .collapsable {
+    display: none !important;
+  }
+
+  #primary-bar-header {
+    padding: 1rem 1rem 0.5rem 1.5rem !important;
+  }
+
+  #primary-bar-header-container {
+    margin-bottom: 0 !important;
+  }
+
+  #bottom-header {
+    display: none !important;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: #000000;
-    color: #ffffff;
+  :root {
+    --alert-color: #c42b1c;
+    --card-color: #1f1f1f;
+    --color: #ffffff;
+    --highlight-color: rgb(255, 255, 255, 0.10);
+    --nonary-color: #393c36;
+    --octonary-color: #404040;
+    --primary-accent-color: #1ed760;
+    --primary-color: #000000;
+    --primary-gradient: linear-gradient(to bottom, #8d9b77, #4c5441);
+    --quaternary-color: #7c7c7c;
+    --quintary-color: #1c1c1c;
+    --scroll-color: #5a5a5a;
+    --scroll-shadow-color: 0 4px 10px 1px rgba(0, 0, 0, 0.5);
+    --second-color: #3f3f3f;
+    --secondary-accent-color: #3ae176;
+    --secondary-color: #121212;
+    --secondary-gradient: linear-gradient(to bottom, #3d4334 0%, var(--secondary-color) 15%);
+    --secondary-highlight-color: rgb(255, 255, 255, 0.055);
+    --secondary-sub-color: #9d9d9d;
+    --senary-color: #484848;
+    --septenary-color: #333333;
+    --shadow-color: 0 2px 16px 0.1px rgb(0, 0, 0, 0.5);
+    --sub-color: #b3b3b3;
+    --tertiary-accent-color: #1bc357;
+    --tertiary-color: #2a2a2a;
   }
 }
 
 @media (prefers-color-scheme: light) {
-  body,
-  header,
-  #primary-bar,
-  #content,
-  #secondary-bar,
-  footer {
-    background-color: #ffffff;
-    color: #000000;
+  :root {
+    --alert-color: #eb4738;
+    --card-color: #eeeeee;
+    --color: #000000;
+    --highlight-color: rgb(0, 0, 0, 0.075);
+    --nonary-color: #b8c5bc;
+    --octonary-color: #040404;
+    --primary-accent-color: #80a347;
+    --primary-color: #ffffff;
+    --primary-gradient: linear-gradient(to bottom, rgb(141, 155, 119, 0.5), rgb(76, 84, 65, 0.5));
+    --quaternary-color: #9b9b9b;
+    --quintary-color: #e9e9e9;
+    --scroll-color: #a5a5a5;
+    --scroll-shadow-color: 0 4px 10px 1px rgba(255, 255, 255, 0.5);
+    --second-color: #f3f3f3;
+    --secondary-accent-color: #688041;
+    --secondary-color: #f9f9f9;
+    --secondary-gradient: linear-gradient(to bottom, rgba(65, 71, 55, 0.45) 0%, var(--secondary-color) 15%);
+    --secondary-highlight-color: rgb(0, 0, 0, 0.055);
+    --secondary-sub-color: #757575;
+    --senary-color: #b9b9b9;
+    --septenary-color: #c0c0c0;
+    --shadow-color: 0 2px 16px 0.1px rgb(255, 255, 255, 0.5);
+    --sub-color: #4b4b4b;
+    --tertiary-accent-color: #79c400;
+    --tertiary-color: #d9d9d9;
   }
 }
 
@@ -98,10 +228,6 @@ section {
 
 .padding-14 {
   padding: 1.4rem;
-}
-
-.padding-2 {
-  padding: 2rem 1rem;
 }
 
 .margin-top-bottom-1 {
@@ -148,10 +274,6 @@ section {
   font-size: 26px;
 }
 
-.size-72 {
-  font-size: 72px;
-}
-
 .normal {
   font-weight: normal;
 }
@@ -161,12 +283,12 @@ section {
 }
 
 .no-wrap {
-  text-wrap: nowrap;
   text-overflow: ellipsis;
+  text-wrap: nowrap;
 }
 
 .scroll-shadow {
-  box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--scroll-shadow-color);
 }
 
 .pointer {
@@ -181,85 +303,63 @@ section {
   text-decoration: underline;
 }
 
-#playlist-play-button {
-  width: 54px;
-  height: 54px;
-  min-width: 54px;
-  min-height: 54px;
-  background-color: #1ed760;
-  border: none;
-  border-radius: 50%;
-}
-
-#playlist-play-button:hover {
-  background-color: #3ae176;
-}
-
 .title-bar-button {
   width: 44px;
   height: 32px;
-  background: transparent;
-  color: #ffffff;
   border: none;
+  color: var(--color);
+  background-color: transparent;
 }
 
 .title-bar-button:hover {
-  background-color: #3f3f3f;
+  background-color: var(--second-color);
 }
 
 .title-bar-button:last-of-type {
-  color: #b3b3b3;
+  color: var(--sub-color);
 }
 
 .title-bar-button:last-of-type:hover {
-  background-color: #c42b1c;
+  background-color: var(--alert-color);
 }
 
 .content-playlist-button {
-  background: transparent;
   border: none;
-  color: #b3b3b3;
+  color: var(--sub-color);
   cursor: pointer;
+  background-color: transparent;
 }
 
 .content-playlist-button:hover {
-  color: #ffffff;
+  color: var(--color);
 }
 
 .content-playlist-button-search {
   width: 32px;
   height: 32px;
-  background: transparent;
   border: none;
   border-radius: 50%;
-  color: #b3b3b3;
+  color: var(--sub-color);
   cursor: pointer;
+  background-color: transparent;
   transition: background-color 0.1s ease;
 }
 
 .content-playlist-button-search:hover {
-  background-color: #1c1c1c;
-  color: #ffffff;
+  color: var(--color);
+  background-color: var(--quintary-color);
 }
 
 .color-white {
-  color: #ffffff;
+  color: var(--color);
 }
 
 .color-lime {
-  color: #1bc357;
+  color: var(--tertiary-accent-color) !important;
 }
 
 .color-gray {
-  color: #b3b3b3;
-}
-
-.background-green {
-  background: linear-gradient(to bottom, #8d9b77, #4c5441);
-}
-
-.background-darkgreen {
-  background: linear-gradient(to bottom, #3d4334, #121212);
+  color: var(--sub-color);
 }
 
 .border-radius-top-left-right-50 {
@@ -267,25 +367,25 @@ section {
 }
 
 .follow-button {
-  background-color: #1f1f1f;
-  color: #ffffff;
-  border-radius: 16px;
-  border: 1px solid #7c7c7c;
   padding: 0.4rem 1rem;
+  border: 1px solid var(--quaternary-color);
+  border-radius: 16px;
+  color: var(--color);
+  background-color: var(--card-color);
 }
 
 .follow-button:hover {
-  border: 1px solid #aeaeae;
+  border: 1px solid var(--sub-color);
 }
 
 .link {
-  font-size: 14px;
+  color: var(--sub-color);
   font-weight: bold;
-  color: #bcbcbc;
+  font-size: 14px;
   text-decoration: none;
 }
 
 .link:hover {
-  color: #ffffff;
+  color: var(--color);
   text-decoration: underline;
 }

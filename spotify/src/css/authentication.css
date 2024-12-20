@@ -1,11 +1,12 @@
 body {
-  color: #ffffff;
   margin: 0;
-  user-select: none;
   overflow: hidden;
+  color: #ffffff;
+  user-select: none;
 }
 
 #frontground {
+  z-index: 1;
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -15,25 +16,24 @@ body {
     rgba(0, 0, 0, 0.75) 50%,
     rgba(0, 0, 0, 0.3) 100%
   );
-  z-index: 1;
 }
 
 #background {
-  width: 100vw;
-  height: 100vh;
-  background-color: #000000;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
 }
 
 .card-container {
-  width: max-content;
-  height: max-content;
-  display: flex;
   gap: 1.2rem;
   rotate: -10deg;
+  display: flex;
+  width: max-content;
+  height: max-content;
   transform-origin: center;
 }
 
@@ -50,73 +50,73 @@ body {
 }
 
 .card {
+  object-fit: cover;
   width: 316px;
   height: 316px;
   border-radius: 8px;
-  object-fit: cover;
 }
 
 #banner {
-  position: absolute;
-  width: 150px;
-  height: 40px;
-  top: 2rem;
-  left: 2rem;
   object-fit: cover;
   z-index: 2;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 150px;
+  height: 40px;
 }
 
 #authentication-container h1 {
+  margin-bottom: 1.4rem;
   font-size: 96px;
   font-family: "Roboto";
-  margin-bottom: 1.4rem;
   word-spacing: -5px;
 }
 
 #settings-button {
+  z-index: 2;
   position: absolute;
   top: 2rem;
   right: 2rem;
-  background-color: #000000;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 16px;
   color: #ffffff;
   font-weight: bold;
-  padding: 0.5rem 1rem;
-  border-radius: 16px;
-  border: none;
-  z-index: 2;
+  background-color: #000000;
 }
 
 #settings-button:hover {
-  background-color: #141414;
   scale: 1.05;
+  background-color: #141414;
 }
 
 #left-button {
+  z-index: 2;
   position: absolute;
+  top: 38%;
+  left: 4rem;
   width: 48px;
   height: 48px;
-  left: 4rem;
-  top: 38%;
-  background-color: #000000;
-  color: #ffffff;
-  transform: translate(-50%);
-  border-radius: 50%;
   border: none;
-  z-index: 2;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #000000;
+  transform: translate(-50%);
 }
 
 #right-button {
+  z-index: 2;
   position: absolute;
+  top: 38%;
+  right: 4rem;
   width: 48px;
   height: 48px;
-  right: 4rem;
-  top: 38%;
-  background-color: #000000;
-  color: #ffffff;
-  transform: translate(50%);
-  border-radius: 50%;
   border: none;
-  z-index: 2;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #000000;
+  transform: translate(50%);
 }
 
 #left-button:hover,
@@ -125,38 +125,38 @@ body {
 }
 
 #authentication-container {
-  position: absolute;
-  left: 2rem;
-  bottom: 5rem;
   z-index: 2;
+  position: absolute;
+  bottom: 5rem;
+  left: 2rem;
 }
 
 #sign-up-button,
 #log-in-button {
   padding: 0.9rem 2rem;
-  font-weight: bold;
-  text-decoration: none;
   border-radius: 24px;
+  font-weight: bold;
   font-size: 14px;
   font-family: "Roboto";
+  text-decoration: none;
 }
 
 #sign-up-button {
-  background-color: #1ed760;
   border: none;
   color: #000000;
+  background-color: #1ed760;
 }
 
 #sign-up-button:hover {
-  background-color: #3be477;
   scale: 1.05;
+  background-color: #3be477;
 }
 
 #log-in-button {
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid #7c7c7c;
   margin-left: 0.8rem;
+  border: 1px solid #7c7c7c;
+  color: #ffffff;
+  background-color: transparent;
 }
 
 #log-in-button:hover {
@@ -165,19 +165,19 @@ body {
 }
 
 #circles {
+  z-index: 2;
   position: absolute;
+  bottom: 2rem;
   left: 50%;
   transform: translate(-50%);
-  bottom: 2rem;
-  z-index: 2;
 }
 
 .circle {
   width: 12px;
   height: 12px;
-  background-color: #b3b3b3;
   border: none;
   border-radius: 50%;
+  background-color: var(--sub-color);
 }
 
 .circle:first-of-type {
