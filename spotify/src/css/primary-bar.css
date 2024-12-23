@@ -28,6 +28,7 @@
 }
 
 #primary-bar-collapse-button {
+  position: relative;
   gap: 1.2rem;
   display: flex;
   align-items: center;
@@ -40,14 +41,46 @@
   transition: color 0.2s ease;
 }
 
+#create-playlist-folder-button,
+#show-more-button {
+  position: relative;
+}
+
 #primary-bar-collapse-button:hover {
   color: var(--color);
+}
+
+#collapse-library-tooltip {
+  transform: translate(-5%, -320%);
+}
+
+#playlist-folder-tooltip {
+  transform: translate(-40%, -280%);
+}
+
+#show-more-tooltip {
+  transform: translate(-30%, -280%);
+}
+
+#primary-bar-collapse-button:hover #collapse-library-tooltip,
+#create-playlist-folder-button:hover #playlist-folder-tooltip,
+#show-more-button:hover #show-more-tooltip {
+  opacity: 1;
+  visibility: visible;
 }
 
 #primary-bar-header-right {
   gap: 0.5rem;
   display: flex;
   align-items: center;
+}
+
+#recents-button {
+  transition: transform 0.2s ease;
+}
+
+#recents-button:hover {
+  transform: scale(1.05);
 }
 
 #playlist-filter {
@@ -75,6 +108,10 @@
   background-color: var(--septenary-color);
 }
 
+.playlist-button:active {
+  background-color: rgb(255, 255, 255, 0.25);
+}
+
 #bottom-header {
   padding: 0 0 0.5rem 0.5rem;
 }
@@ -94,6 +131,9 @@ h5 {
 }
 
 #playlists {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scrollbar-color: var(--scroll-color) transparent;
+  scrollbar-width: 12px;
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -105,11 +145,11 @@ h5 {
 .playlist {
   justify-content: space-between;
   padding: 0.5rem;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 .playlist:nth-child(2) {
-  border-radius: 8px;
   background-color: var(--tertiary-color);
 }
 
@@ -118,8 +158,15 @@ h5 {
 }
 
 .playlist:hover {
-  border-radius: 8px;
   background-color: var(--secondary-highlight-color);
+}
+
+.playlist:active {
+  background-color: #000000;
+}
+
+.playlist:nth-child(2):active {
+  background-color: rgb(255, 255, 255, 0.3);
 }
 
 .playlist:hover #playlists-playlist-image-overlay {
@@ -128,8 +175,8 @@ h5 {
 
 #playlists-playlist-image-container {
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   margin-right: 0.8rem;
 }
 
@@ -158,9 +205,8 @@ h5 {
   margin-right: 0.45rem;
 }
 
-/* Applies to WebKit browsers (e.g., Chrome, Edge, Safari) */
 #playlists::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
+  width: 0.75rem;
 }
 
 #playlists::-webkit-scrollbar-button {
@@ -168,30 +214,18 @@ h5 {
 }
 
 #playlists::-webkit-scrollbar-track {
-  background-color: #f1f1f1; /* Scrollbar track (background) */
+  background-color: #f1f1f1;
 }
 
 #playlists::-webkit-scrollbar-thumb {
-  border-radius: 6px; /* Scrollbar thumb (the draggable part) */
-  background-color: var(--scroll-color); /* Rounded corners for the thumb */
+  border-radius: 6px;
+  background-color: var(--scroll-color);
 }
 
 #playlists::-webkit-scrollbar-thumb:hover {
-  background-color: #898989; /* Darker on hover */
+  background-color: #898989;
 }
 
-/* Applies to Firefox */
-#playlists {
-  scrollbar-color: var(--scroll-color) transparent; /* "auto" or "thin" */
-  scrollbar-width: 12px; /* thumb color and track color */
-}
-
-/* Styling for Edge and IE */
-#playlists {
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-}
-
-/* Applies to WebKit browsers (e.g., Chrome, Edge, Safari) */
 #playlists::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
+  width: 0.75rem;
 }

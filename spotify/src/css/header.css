@@ -2,8 +2,8 @@ header {
   -webkit-app-region: drag;
   display: flex;
   box-sizing: border-box;
-  height: 64px;
-  padding: 0.5rem 0rem 0.5rem 1rem;
+  height: 4rem;
+  padding: 0.5rem 0 0.5rem 1rem;
   background-color: var(--primary-color);
 }
 
@@ -48,30 +48,82 @@ header input {
   -webkit-app-region: no-drag;
 }
 
+#header-go-back-button,
+#header-go-forward-button {
+  position: relative;
+}
+
+#go-forward-tooltip {
+  transform: translateX(-35%);
+}
+
+#home-tooltip {
+  transform: translate(-10%, 35%);
+}
+
+#search-tooltip {
+  transform: translate(-18%, 40%);
+}
+
+#browse-tooltip {
+  transform: translate(-20%, 40%);
+}
+
+#profile-tooltip {
+  transform: translate(-25%, 50%);
+}
+
+#header-go-back-button:hover #go-back-tooltip,
+#header-go-forward-button:hover #go-forward-tooltip,
+#header-home-button:hover #home-tooltip,
+#search-button:hover #search-tooltip,
+#browse-button:hover #browse-tooltip,
+#header-whats-new-button:hover #whats-new-tooltip,
+#header-friend-activity-button:hover #friend-activity-tooltip,
+#profile-button:hover #profile-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
 #header-home-button {
-  width: 42px;
-  height: 42px;
+  position: relative;
+  width: 2.625rem;
+  height: 2.625rem;
   border: none;
   border-radius: 50%;
   color: var(--sub-color);
   cursor: pointer;
   background-color: var(--card-color);
-  transition: scale 0.1s ease;
 }
 
-#header-home-button:hover {
-  scale: 1.05;
+#home-icon {
+  transition: transform 0.1s ease;
+}
+
+#header-home-button:hover #home-icon {
+  transform: scale(1.05);
+}
+
+.header-button {
+  position: relative;
+  padding: 0.7rem;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  color: var(--sub-color);
+  cursor: pointer;
+  background-color: var(--card-color);
 }
 
 #search-button {
-  padding: 0.7rem;
-  border-top: 1px solid transparent;
   border-right: none;
-  border-bottom: 1px solid transparent;
   border-left: 1px solid transparent;
   border-radius: 50% 0 0 50%;
-  color: var(--sub-color);
-  background-color: var(--card-color);
+}
+
+#browse-button {
+  border-right: 1px solid transparent;
+  border-left: none;
+  border-radius: 0 50% 50% 0;
 }
 
 #header-search-container {
@@ -80,7 +132,7 @@ header input {
 }
 
 #search-bar {
-  height: 42px;
+  height: 2.625rem;
   padding: 0.8rem 8rem 0.8rem 0;
   border: 1px solid transparent;
   font-weight: bold;
@@ -88,48 +140,23 @@ header input {
   background-color: var(--card-color);
 }
 
-#search-bar:hover {
+#search-bar:hover,
+#header-search-container:hover #search-button,
+#header-search-container:hover #search-bar,
+#header-search-container:hover #search-bar-separator-container,
+#header-search-container:hover #browse-button {
   border-top: 1px solid var(--scroll-color);
   border-bottom: 1px solid var(--scroll-color);
   background-color: var(--tertiary-color);
 }
 
 #header-search-container:hover #search-button {
-  border-top: 1px solid var(--scroll-color);
-  border-bottom: 1px solid var(--scroll-color);
   border-left: 1px solid var(--scroll-color);
   color: var(--color);
-  background-color: var(--tertiary-color);
-}
-
-#header-search-container:hover #search-bar {
-  border-top: 1px solid var(--scroll-color);
-  border-bottom: 1px solid var(--scroll-color);
-  background-color: var(--tertiary-color);
-}
-
-#header-search-container:hover #search-bar-separator-container {
-  border-top: 1px solid var(--scroll-color);
-  border-bottom: 1px solid var(--scroll-color);
-  background-color: var(--tertiary-color);
 }
 
 #header-search-container:hover #browse-button {
-  border-top: 1px solid var(--scroll-color);
   border-right: 1px solid var(--scroll-color);
-  border-bottom: 1px solid var(--scroll-color);
-  background-color: var(--tertiary-color);
-}
-
-#browse-button {
-  padding: 0.7rem;
-  border-top: 1px solid transparent;
-  border-right: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-  border-left: none;
-  border-radius: 0 50% 50% 0;
-  color: var(--sub-color);
-  background-color: var(--card-color);
 }
 
 #browse-button:hover {
@@ -137,11 +164,16 @@ header input {
 }
 
 #browse-button i {
-  transition: scale 0.1s ease;
+  transition: transform 0.1s ease;
 }
 
 #browse-button i:hover {
-  scale: 1.05;
+  transform: scale(1.05);
+}
+
+#header-whats-new-button,
+#header-friend-activity-button {
+  position: relative;
 }
 
 #search-bar-separator-container {
@@ -158,22 +190,24 @@ header input {
 
 #profile-button {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   width: 3rem;
   height: 3rem;
   border: none;
   border-radius: 50%;
+  cursor: pointer;
   background-color: var(--card-color);
-  transition: scale 0.1s ease;
+  transition: transform 0.1s ease;
 }
 
 #profile-button:hover {
-  scale: 1.05;
+  transform: scale(1.05);
 }
 
 header img {
-  width: 34px;
-  height: 34px;
+  width: 2.125rem;
+  height: 2.125rem;
   border-radius: 50%;
 }

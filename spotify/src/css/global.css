@@ -27,6 +27,7 @@
 }
 
 body {
+  -webkit-user-select: none;
   margin: auto;
   overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
@@ -36,7 +37,7 @@ body {
 }
 
 section {
-  height: calc(100vh - 148px);
+  height: calc(100vh - 9.375rem);
   margin: 0 0.5rem;
 }
 
@@ -45,7 +46,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 9px;
+  width: 0.5625rem;
   height: 100%;
 }
 
@@ -111,11 +112,12 @@ section {
 
 @media only screen and (max-width: 1000px) {
   #primary-bar {
-    width: 100px;
-    min-width: 100px !important;
+    width: 6.25rem;
+    min-width: 6.25rem !important;
   }
 
-  .collapsable {
+  .collapsable,
+  #bottom-header {
     display: none !important;
   }
 
@@ -125,10 +127,6 @@ section {
 
   #primary-bar-header-container {
     margin-bottom: 0 !important;
-  }
-
-  #bottom-header {
-    display: none !important;
   }
 }
 
@@ -304,11 +302,12 @@ section {
 }
 
 .title-bar-button {
-  width: 44px;
-  height: 32px;
+  width: 2.75rem;
+  height: 2rem;
   border: none;
   color: var(--color);
   background-color: transparent;
+  transition: background-color 0.2s ease;
 }
 
 .title-bar-button:hover {
@@ -323,31 +322,44 @@ section {
   background-color: var(--alert-color);
 }
 
-.content-playlist-button {
+.text-button {
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.text-button,
+.content-playlist-button,
+.content-playlist-button-search {
   border: none;
   color: var(--sub-color);
   cursor: pointer;
   background-color: transparent;
 }
 
+.text-button:hover,
 .content-playlist-button:hover {
   color: var(--color);
 }
 
+.content-playlist-button:active {
+  color: rgb(255, 255, 255, 0.45);
+}
+
 .content-playlist-button-search {
-  width: 32px;
-  height: 32px;
-  border: none;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
-  color: var(--sub-color);
-  cursor: pointer;
-  background-color: transparent;
   transition: background-color 0.1s ease;
 }
 
 .content-playlist-button-search:hover {
   color: var(--color);
   background-color: var(--quintary-color);
+}
+
+.content-playlist-button-search:active {
+  background-color: #000000;
 }
 
 .color-white {
@@ -372,10 +384,17 @@ section {
   border-radius: 16px;
   color: var(--color);
   background-color: var(--card-color);
+  transition: scale 0.2s ease;
 }
 
 .follow-button:hover {
   border: 1px solid var(--sub-color);
+  transform: scale(1.05);
+}
+
+.follow-button:active {
+  border: 1px solid rgb(255, 255, 255, 0.25);
+  color: rgb(255, 255, 255, 0.75);
 }
 
 .link {
@@ -388,4 +407,28 @@ section {
 .link:hover {
   color: var(--color);
   text-decoration: underline;
+}
+
+.tooltip {
+  display: inline-block;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  position: absolute;
+  top: 2.6rem;
+  left: 0;
+  padding: 0.4rem;
+  border-radius: 4px;
+  pointer-events: none;
+  background-color: #282828;
+  box-shadow: 0 1px 5px 1px #000000;
+  transition: opacity 0.2s ease-in-out 0.2s, visibility 0s 0.2s;
+  transform: translateX(-30%);
+}
+
+.tooltip > h4 {
+  margin: 0;
+  color: var(--color);
+  font-size: 13px;
+  font-weight: bold;
 }

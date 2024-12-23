@@ -9,18 +9,19 @@
 }
 
 #not-found-content img {
-  width: 128px;
-  height: 128px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 8rem;
 }
 
 #not-found-content h1 {
   margin: 1rem 0;
-  font-size: 72px;
+  font-size: 4.5rem;
 }
 
 #not-found-content h6 {
   color: var(--sub-color);
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 #not-found-content button {
@@ -29,11 +30,16 @@
   border: none;
   border-radius: 8px;
   color: var(--primary-color);
+  cursor: pointer;
   background-color: var(--color);
 }
 
+#not-found-content button:hover {
+  background-color: rgb(255, 255, 255, 0.95);
+}
+
 #not-found-content a {
-  margin-top: 8px;
+  margin-top: 0.5rem;
   color: var(--color);
   text-decoration: none;
 }

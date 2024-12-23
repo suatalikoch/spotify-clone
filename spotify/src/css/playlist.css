@@ -1,4 +1,7 @@
 #content {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scrollbar-color: var(--scroll-color) transparent;
+  scrollbar-width: 12px;
   position: relative;
   box-sizing: border-box;
   height: 100%;
@@ -188,6 +191,10 @@
   transition: opacity 0.2s ease;
 }
 
+#song-playing-icon {
+  display: block !important;
+}
+
 #songs th:first-of-type,
 #songs td:first-of-type {
   text-align: right;
@@ -252,13 +259,15 @@
   display: flex;
 }
 
-#songs tr:hover #first-column p {
-  display: none;
+#songs tr:hover #first-column p,
+#songs tr:hover #song-playing-icon 
+{
+  display: none !important;
 }
 
 #songs img {
-  width: 42px;
-  height: 42px;
+  width: 2.625rem;
+  height: 2.625rem;
   margin-right: 0.75rem;
   margin-left: 1.125rem;
   border-radius: 8px;
@@ -270,6 +279,7 @@
   font-weight: 800;
   font-size: 88px;
   line-height: 6rem;
+  cursor: pointer;
 }
 
 #playlist-details {
@@ -281,8 +291,8 @@
 }
 
 #profile-img {
-  width: 25px;
-  height: 25px;
+  width: 1.5625rem;
+  height: 1.5625rem;
   border-radius: 50%;
 }
 
@@ -319,30 +329,171 @@
   font-size: 7px;
 }
 
+#about-artist-dialog-container {
+  display: flex;
+  visibility: hidden;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.7);
+}
+
+#about-artist-dialog {
+  position: relative;
+  width: 48rem;
+  height: 60rem;
+  border-radius: 8px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #121212;
+}
+
+#about-artist-dialog-close-button {
+  z-index: 1;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  color: var(--sub-color);
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
+
+#about-artist-dialog-close-button:hover {
+  color: var(--color);
+  background-color: rgb(255, 255, 255, 0.25);
+}
+
+#dialog-top {
+  position: relative;
+}
+
+#dialog-banner {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+#banner-slider {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 2.5%;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  transform: translateY(-50%);
+}
+
+#banner-slider-left,
+#banner-slider-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  color: var(--sub-color);
+  font-size: 16px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
+
+#banner-slider-left:hover,
+#banner-slider-right:hover {
+  color: var(--color);
+  background-color: rgb(255, 255, 255, 0.25);
+}
+
+#dialog-bottom {
+  gap: 2rem;
+  display: flex;
+  padding: 2.5rem;
+}
+
+.dialog-header {
+  margin-bottom: 1rem;
+}
+
+#dialog-bottom h1 {
+  margin: 0;
+  font-size: 34px;
+}
+
+#dialog-bottom p {
+  margin: 0;
+}
+
+#dialog-bottom a {
+  color: var(--color);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+#dialog-bottom a:hover {
+  text-decoration: underline;
+}
+
+#dialog-bottom-left {
+  gap: 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#dialog-socials div,
+#dialog-posted-by {
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+#dialog-posted-by {
+  margin-top: 1rem;
+}
+
+#dialog-socials {
+  gap: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+#dialog-socials img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 2rem;
+  border-radius: 8px;
+}
+
+#dialog-posted-by img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
 #content::-webkit-scrollbar-button {
   display: none;
 }
 
 #content::-webkit-scrollbar-track {
-  background-color: #f1f1f1; /* Scrollbar track (background) */
+  background-color: #f1f1f1; 
 }
 
 #content::-webkit-scrollbar-thumb {
-  border-radius: 6px; /* Scrollbar thumb (the draggable part) */
-  background-color: var(--scroll-color); /* Rounded corners for the thumb */
+  border-radius: 6px;
+  background-color: var(--scroll-color);
 }
 
 #content::-webkit-scrollbar-thumb:hover {
-  background-color: #898989; /* Darker on hover */
-}
-
-/* Applies to Firefox */
-#content {
-  scrollbar-color: var(--scroll-color) transparent; /* "auto" or "thin" */
-  scrollbar-width: 12px; /* thumb color and track color */
-}
-
-/* Styling for Edge and IE */
-#content {
-  -ms-overflow-style: -ms-autohiding-scrollbar;
+  background-color: #898989;
 }

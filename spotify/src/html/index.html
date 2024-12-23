@@ -15,23 +15,48 @@
     <!-- Header -->
     <header>
       <div id="header-left">
-        <button class="content-playlist-button">
+        <button class="content-playlist-button" aria-label="Settings">
           <i class="fa fa-ellipsis size-18"></i>
         </button>
-        <button class="content-playlist-button">
+        <button
+          id="header-go-back-button"
+          class="content-playlist-button"
+          aria-label="Go Back"
+        >
           <i class="fa fa-chevron-left size-18"></i>
+          <div id="go-back-tooltip" class="tooltip">
+            <h4>Go&nbsp;Back</h4>
+          </div>
         </button>
-        <button class="content-playlist-button">
+        <button
+          id="header-go-forward-button"
+          class="content-playlist-button"
+          aria-label="Go Forward"
+        >
           <i class="fa fa-chevron-right size-18"></i>
+          <div id="go-forward-tooltip" class="tooltip">
+            <h4>Go&nbsp;Forward</h4>
+          </div>
         </button>
       </div>
       <div id="header-center">
-        <button id="header-home-button" data-page="home">
-          <i class="fa fa-home size-18" data-page="home"></i>
+        <button id="header-home-button" data-page="home" aria-label="Home">
+          <i id="home-icon" class="fa fa-home size-18" data-page="home"></i>
+          <div id="home-tooltip" class="tooltip">
+            <h4>Home</h4>
+          </div>
         </button>
         <div id="header-search-container">
-          <button id="search-button" class="pointer" data-page="unknown">
+          <button
+            id="search-button"
+            class="header-button"
+            data-page="unknown"
+            aria-label="Search"
+          >
             <i class="fa fa-search size-18" data-page="unknown"></i>
+            <div id="search-tooltip" class="tooltip">
+              <h4>Search</h4>
+            </div>
           </button>
           <input
             id="search-bar"
@@ -41,34 +66,71 @@
           <div id="search-bar-separator-container">
             <div id="search-bar-separator"></div>
           </div>
-          <button id="browse-button" class="pointer" data-page="browse">
+          <button
+            id="browse-button"
+            class="header-button"
+            data-page="browse"
+            aria-label="Browse"
+          >
             <i class="fa fa-bars size-18" data-page="browse"></i>
+            <div id="browse-tooltip" class="tooltip">
+              <h4>Browse</h4>
+            </div>
           </button>
         </div>
       </div>
       <div id="header-right">
         <div id="header-right-start">
-          <button class="content-playlist-button">
+          <button
+            id="header-whats-new-button"
+            class="content-playlist-button"
+            aria-label="What's New"
+          >
             <i class="fa fa-bell size-16"></i>
+            <div id="whats-new-tooltip" class="tooltip">
+              <h4>What's&nbsp;New</h4>
+            </div>
           </button>
-          <button class="content-playlist-button">
+          <button
+            id="header-friend-activity-button"
+            class="content-playlist-button"
+            aria-label="Friend Activity"
+          >
             <i class="fa fa-users size-16"></i>
+            <div id="friend-activity-tooltip" class="tooltip">
+              <h4>Friend&nbsp;Activity</h4>
+            </div>
           </button>
-          <button id="profile-button" class="pointer">
+          <button id="profile-button" aria-label="Profile">
             <img
               src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
               alt="Profile Picture"
             />
+            <div id="profile-tooltip" class="tooltip">
+              <h4>suatalikoch</h4>
+            </div>
           </button>
         </div>
         <div id="header-right-end">
-          <button id="minimize-button" class="title-bar-button">
-            <i class="fa fa-minimize size-12"></i>
+          <button
+            id="minimize-button"
+            class="title-bar-button"
+            aria-label="Minimize Window"
+          >
+            <i class="fa fa-window-minimize size-12"></i>
           </button>
-          <button id="maximize-button" class="title-bar-button">
-            <i class="fa fa-maximize size-12"></i>
+          <button
+            id="maximize-button"
+            class="title-bar-button"
+            aria-label="Maximize Window"
+          >
+            <i class="fa fa-window-maximize size-12"></i>
           </button>
-          <button id="close-button" class="title-bar-button">
+          <button
+            id="close-button"
+            class="title-bar-button"
+            aria-label="Close Window"
+          >
             <i class="fa fa-close size-16"></i>
           </button>
         </div>
@@ -84,14 +146,29 @@
               <button id="primary-bar-collapse-button">
                 <i class="fa fa-caret-down size-20"></i>
                 Your Library
+                <div id="collapse-library-tooltip" class="tooltip">
+                  <h4>Collapse&nbsp;Your&nbsp;Library</h4>
+                </div>
               </button>
             </div>
             <div id="primary-bar-header-right">
-              <button class="content-playlist-button-search collapsable">
+              <button
+                id="create-playlist-folder-button"
+                class="content-playlist-button-search collapsable"
+              >
                 <i class="fa fa-plus size-18"></i>
+                <div id="playlist-folder-tooltip" class="tooltip">
+                  <h4>Create&nbsp;playlist&nbsp;or&nbsp;folder</h4>
+                </div>
               </button>
-              <button class="content-playlist-button-search collapsable">
+              <button
+                id="show-more-button"
+                class="content-playlist-button-search collapsable"
+              >
                 <i class="fa fa-arrow-right size-18"></i>
+                <div id="show-more-tooltip" class="tooltip">
+                  <h4>Show&nbsp;more</h4>
+                </div>
               </button>
             </div>
           </div>
@@ -107,9 +184,9 @@
             <button class="content-playlist-button-search collapsable">
               <i class="fa fa-search size-14"></i>
             </button>
-            <button class="content-playlist-button collapsable">
+            <button id="recents-button" class="text-button collapsable">
               Recents
-              <i class="fa fa-list size-16"></i>
+              <i class="fa fa-list-ul size-16"></i>
             </button>
           </div>
           <div class="flex align-center playlist" data-page="playlist">
@@ -176,14 +253,23 @@
             src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
             id="song-img"
             alt="Song Picture"
+            data-page="playlist"
           />
           <div class="space-between align-center">
             <div>
-              <a href="#" class="color-white size-24 bold anchor">Addictive</a>
+              <a
+                href="#"
+                class="color-white size-24 bold anchor"
+                data-page="playlist"
+                >Addictive</a
+              >
               <div>
-                <a href="#" class="color-gray bold anchor">Truth Hurts</a
+                <a href="#" class="color-gray bold anchor" data-page="playlist"
+                  >Truth Hurts</a
                 ><span class="color-gray">,</span>
-                <a href="#" class="color-gray bold anchor">Rakim</a>
+                <a href="#" class="color-gray bold anchor" data-page="playlist"
+                  >Rakim</a
+                >
               </div>
             </div>
             <div>
@@ -208,7 +294,10 @@
               <div id="artist-img-overlay"></div>
             </div>
             <div id="about-artist">
-              <a href="#" class="size-16 color-white bold anchor"
+              <a
+                href="#"
+                class="size-16 color-white bold anchor"
+                data-page="playlist"
                 >Truth Hurts</a
               >
               <div class="space-between align-center">
@@ -252,14 +341,18 @@
             </div>
             <div class="space-between align-center">
               <div>
-                <a href="#" class="color-white anchor">Truth Hurts</a>
+                <a href="#" class="color-white anchor" data-page="playlist"
+                  >Truth Hurts</a
+                >
                 <h5 class="color-gray margin-0 normal">Main Artist</h5>
               </div>
               <button class="follow-button">Follow</button>
             </div>
             <div class="space-between align-center">
               <div>
-                <a href="#" class="color-white anchor">Rakim</a>
+                <a href="#" class="color-white anchor" data-page="playlist"
+                  >Rakim</a
+                >
                 <h5 class="color-gray margin-0 normal">Featured Artist</h5>
               </div>
               <button class="follow-button">Follow</button>
@@ -296,6 +389,7 @@
                   href="#"
                   id="queue-next-anchor"
                   class="color-gray size-14 anchor"
+                  data-page="playlist"
                 >
                   Music video · Selena Gomez & The Scene
                 </a>
@@ -322,39 +416,54 @@
               src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
               alt="Song Picture"
             />
-            <i id="footer-image-collapse" class="fa fa-chevron-down"></i>
+            <i
+              id="footer-image-collapse"
+              class="fa fa-chevron-down"
+              aria-label="Collapse Image"
+            ></i>
           </div>
           <div id="footer-song-details">
-            <a href="#" class="color-white no-wrap size-14 bold anchor"
+            <a
+              href="#"
+              class="color-white no-wrap size-14 bold anchor"
+              data-page="playlist"
               >Addictive</a
             >
             <div id="footer-song-authors">
-              <a href="#" class="color-gray no-wrap size-12 anchor"
+              <a
+                href="#"
+                class="color-gray no-wrap size-12 anchor"
+                data-page="playlist"
                 >Truth Hurts</a
               ><span class="color-gray no-wrap">,</span>
-              <a href="#" class="color-gray no-wrap size-12 anchor">Rakim</a>
+              <a
+                href="#"
+                class="color-gray no-wrap size-12 anchor"
+                data-page="playlist"
+                >Rakim</a
+              >
             </div>
           </div>
         </div>
-        <button class="content-playlist-button">
+        <button class="content-playlist-button" aria-label="Add To Playlist">
           <i class="fa fa-circle-check size-16 color-lime"></i>
         </button>
       </div>
       <div id="footer-center">
         <div id="footer-center-top">
-          <button class="content-playlist-button">
+          <button class="content-playlist-button" aria-label="Shuffle">
             <i class="fa fa-shuffle size-16"></i>
           </button>
-          <button class="content-playlist-button">
+          <button class="content-playlist-button" aria-label="Backward Step">
             <i class="fa fa-backward-step size-18"></i>
           </button>
-          <button id="footer-play-button">
+          <button id="footer-play-button" aria-label="Play">
             <i class="fa fa-play size-18"></i>
           </button>
-          <button class="content-playlist-button">
+          <button class="content-playlist-button" aria-label="Forward Step">
             <i class="fa fa-forward-step size-18"></i>
           </button>
-          <button class="content-playlist-button">
+          <button class="content-playlist-button" aria-label="Repeat">
             <i class="fa-solid fa-repeat size-16 color-lime"></i>
           </button>
         </div>
@@ -365,42 +474,54 @@
         </div>
       </div>
       <div id="footer-right">
-        <button id="now-playing-view-button" class="content-playlist-button">
+        <button
+          id="now-playing-view-button"
+          class="content-playlist-button"
+          aria-label="Now Playing"
+        >
           <i
             id="now-playing-view"
-            class="fa-solid fa-expand size-16 color-lime"
+            class="fa-regular fa-square-caret-right size-18 color-lime"
           ></i>
         </button>
         <button
           id="lyrics-button"
           class="content-playlist-button"
           data-page="lyrics"
+          aria-label="Lyrics"
         >
           <i
             id="lyrics"
-            class="fa fa-microphone-lines size-16"
+            class="fa fa-microphone size-16"
             data-page="lyrics"
           ></i>
         </button>
-        <button class="content-playlist-button">
-          <i class="fa fa-grip-lines size-16"></i>
+        <button class="content-playlist-button" aria-label="Queue">
+          <i class="fa fa-bars-staggered size-16"></i>
         </button>
-        <button class="content-playlist-button">
+        <button
+          class="content-playlist-button"
+          aria-label="Connect To a Device"
+        >
           <i class="fa fa-compact-disc size-16"></i>
         </button>
         <div class="flex">
-          <button class="content-playlist-button">
+          <button class="content-playlist-button" aria-label="Mute / Unmute">
             <i class="fa fa-volume-high size-16"></i>
           </button>
           <div id="sound-slider">
             <input type="range" min="0" value="100" max="100" />
           </div>
         </div>
-        <button class="content-playlist-button">
-          <i class="fa fa-layer-group size-16"></i>
+        <button class="content-playlist-button" aria-label="Miniplayer">
+          <i class="fa fa-trello size-16"></i>
         </button>
-        <button class="content-playlist-button">
-          <i class="fa fa-expand size-16"></i>
+        <button
+          class="content-playlist-button"
+          data-page="settings"
+          aria-label="Fullscreen"
+        >
+          <i class="fa fa-expand size-16" data-page="settings"></i>
         </button>
       </div>
     </footer>

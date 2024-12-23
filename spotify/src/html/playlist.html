@@ -23,7 +23,12 @@
               id="profile-img"
               alt="Profile Picture"
             />
-            <a href="#" class="size-14 bold anchor color-white">suatalikoch</a>
+            <a
+              href="#"
+              class="size-14 bold anchor color-white"
+              data-page="profile"
+              >suatalikoch</a
+            >
             <h5 class="color-gray">· 52 songs, 3 hr 36 min</h5>
           </div>
         </div>
@@ -43,7 +48,7 @@
           </button>
           &nbsp; &nbsp;
           <button class="content-playlist-button">
-            <i class="fa fa-download fa-2x"></i>
+            <i class="fa fa-circle-arrow-down fa-2x"></i>
           </button>
           &nbsp; &nbsp;
           <button class="content-playlist-button">
@@ -58,9 +63,9 @@
           <button class="content-playlist-button-search">
             <i class="fa fa-search size-16"></i>
           </button>
-          <button class="content-playlist-button">
+          <button class="text-button">
             Custom Order
-            <i class="fa fa-list size-16"></i>
+            <i class="fa fa-list-ul size-16"></i>
           </button>
         </div>
       </div>
@@ -117,16 +122,24 @@
                   <i id="play-square-icon" class="fa fa-play"></i>
                 </div>
                 <div class="song-authors">
-                  <a href="#" class="color-gray size-13 bold anchor"
+                  <a
+                    href="#"
+                    class="color-gray size-13 bold anchor"
+                    data-page="playlist"
                     >Serge Devant</a
                   ><span class="color-gray">, </span>
-                  <a href="#" class="color-gray size-13 bold anchor">Hadley</a>
+                  <a
+                    href="#"
+                    class="color-gray size-13 bold anchor"
+                    data-page="playlist"
+                    >Hadley</a
+                  >
                 </div>
               </div>
             </div>
           </td>
           <td>
-            <a href="#" class="song-album">Wanderer</a>
+            <a href="#" class="song-album" data-page="playlist">Wanderer</a>
           </td>
           <td class="size-13">
             <div class="flex align-center space-between">
@@ -144,7 +157,10 @@
         <tr class="song">
           <td>
             <div id="first-column">
-              <p class="margin-0">2</p>
+              <i
+                id="song-playing-icon"
+                class="fa fa-chart-simple color-lime"
+              ></i>
               <i class="fa fa-pause"></i>
             </div>
           </td>
@@ -156,15 +172,23 @@
             <div>
               <h5 class="song-title color-lime">Addictive (feat. Hadley)</h5>
               <div class="song-authors">
-                <a href="#" class="color-gray size-13 bold anchor"
+                <a
+                  href="#"
+                  class="color-gray size-13 bold anchor"
+                  data-page="playlist"
                   >Serge Devant</a
                 ><span class="color-gray">,</span>
-                <a href="#" class="color-gray size-13 bold anchor">Hadley</a>
+                <a
+                  href="#"
+                  class="color-gray size-13 bold anchor"
+                  data-page="playlist"
+                  >Hadley</a
+                >
               </div>
             </div>
           </td>
           <td>
-            <a href="#" class="song-album">Wanderer</a>
+            <a href="#" class="song-album" data-page="playlist">Wanderer</a>
           </td>
           <td class="size-13">
             <div class="flex align-center space-between">
@@ -180,6 +204,140 @@
           </td>
         </tr>
       </table>
+    </div>
+  </div>
+  <div id="about-artist-dialog-container">
+    <div id="about-artist-dialog">
+      <button id="about-artist-dialog-close-button">
+        <i class="fa fa-close"></i>
+      </button>
+      <div id="dialog-top">
+        <img
+          id="dialog-banner"
+          src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
+          alt="Artist Image"
+        />
+        <div id="banner-slider">
+          <button id="banner-slider-left">
+            <i class="fa fa-chevron-left"></i>
+          </button>
+          <button id="banner-slider-right">
+            <i class="fa fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+      <div id="dialog-bottom">
+        <div id="dialog-bottom-left">
+          <div class="dialog-header">
+            <h1>6,357,788</h1>
+            <h5 class="color-gray">Followers</h5>
+          </div>
+          <div class="dialog-header">
+            <h1>4,483,771</h1>
+            <h5 class="color-gray">Monthly listeners</h5>
+          </div>
+          <div>
+            <h5>Istanbul, TR</h5>
+            <h5 class="color-gray">1,374,374 listeners</h5>
+          </div>
+          <div>
+            <h5>Istanbul, TR</h5>
+            <h5 class="color-gray">1,374,374 listeners</h5>
+          </div>
+          <div>
+            <h5>Istanbul, TR</h5>
+            <h5 class="color-gray">1,374,374 listeners</h5>
+          </div>
+          <div>
+            <h5>Istanbul, TR</h5>
+            <h5 class="color-gray">1,374,374 listeners</h5>
+          </div>
+          <div>
+            <h5>Istanbul, TR</h5>
+            <h5 class="color-gray">1,374,374 listeners</h5>
+          </div>
+          <div id="dialog-socials">
+            <div>
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
+                alt="Social Image"
+              />
+              <a href="#">Instagram</a>
+            </div>
+            <div>
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
+                alt="Social Image"
+              />
+              <a href="#">Facebook</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="color-gray">
+            Truth Hurts launched onto the music scene in grand fashion with her
+            debut album "Truthfully Speaking" on <a href="#">Dr. Dre</a>'s
+            Aftermath label. Globally celebrated for her first single
+            appropriately titled "Addictive", Truth topped the 2002 music charts
+            in 14 countries and garnered two Grammy nominations. With heavy
+            rotation in radio and music television, she toured with
+            <a href="#">Dr. Dre</a> and <a href="#">Snoop Dogg</a> on the Up in
+            Smoke Tour. Shortly after, she toured with
+            <a href="#">Lauryn Hill</a> and <a href="#">Outkast</a>, on The
+            Smoking Grooves Tour. Truth's Operatic and Theatrical training began
+            at the tender age of 10 and introduced her to a love for acting. She
+            has numerous film and television credits under her belt, including
+            roles in films "Security" alongside Antonio Banderas, "211"
+            alongside Nicolas Cage, and the television series "The Parkers". In
+            2004, Truth Hurts released her sophomore album, "Ready Now" on
+            <a href="#">Raphael Saadiq</a>'s Label, Pookie Entertainment. She
+            continued performing and touring, returning in the screen in 2007
+            appearing in "Marigold", musical revue "I can't Stop Loving You" and
+            "Genius of Ray Charles" portraying "Maryanne" of the Raelettes,
+            Charles famed back up vocalists. Her new single "RnB Love" is the
+            newest release from the upcoming She-P (EP) entitled #revelations
+            which will be released October 10th. Fans can expect an unapologetic
+            yet completely relationship WOKE Truth as she journeys back to the
+            truth and #revelations based on female empowerment and
+            enlightenment.
+          </p>
+          <br />
+          <p class="color-gray">
+            Truth Hurts launched onto the music scene in grand fashion with her
+            debut album "Truthfully Speaking" on <a href="#">Dr. Dre</a>'s
+            Aftermath label. Globally celebrated for her first single
+            appropriately titled "Addictive", Truth topped the 2002 music charts
+            in 14 countries and garnered two Grammy nominations. With heavy
+            rotation in radio and music television, she toured with
+            <a href="#">Dr. Dre</a> and <a href="#">Snoop Dogg</a> on the Up in
+            Smoke Tour. Shortly after, she toured with
+            <a href="#">Lauryn Hill</a> and <a href="#">Outkast</a>, on The
+            Smoking Grooves Tour. Truth's Operatic and Theatrical training began
+            at the tender age of 10 and introduced her to a love for acting. She
+            has numerous film and television credits under her belt, including
+            roles in films "Security" alongside Antonio Banderas, "211"
+            alongside Nicolas Cage, and the television series "The Parkers". In
+            2004, Truth Hurts released her sophomore album, "Ready Now" on
+            <a href="#">Raphael Saadiq</a>'s Label, Pookie Entertainment. She
+            continued performing and touring, returning in the screen in 2007
+            appearing in "Marigold", musical revue "I can't Stop Loving You" and
+            "Genius of Ray Charles" portraying "Maryanne" of the Raelettes,
+            Charles famed back up vocalists. Her new single "RnB Love" is the
+            newest release from the upcoming She-P (EP) entitled #revelations
+            which will be released October 10th. Fans can expect an unapologetic
+            yet completely relationship WOKE Truth as she journeys back to the
+            truth and #revelations based on female empowerment and
+            enlightenment.
+          </p>
+          <div id="dialog-posted-by">
+            <img
+              src="https://i.scdn.co/image/ab67616d0000b273114507146f38afe8b7bf13ce"
+              alt="Artist Image"
+            />
+            <h5>Posted By Ezhel</h5>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

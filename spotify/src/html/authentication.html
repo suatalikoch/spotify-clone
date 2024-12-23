@@ -230,8 +230,12 @@
       alt="Logo"
     />
     <button id="settings-button">Settings</button>
-    <button id="left-button"><i class="fa fa-chevron-left"></i></button>
-    <button id="right-button"><i class="fa fa-chevron-right"></i></button>
+    <button id="left-button" aria-label="Slide Left">
+      <i class="fa fa-chevron-left"></i>
+    </button>
+    <button id="right-button" aria-label="Slide Right">
+      <i class="fa fa-chevron-right"></i>
+    </button>
     <div id="authentication-container">
       <h1>Millions of songs.<br />Free on Spotify.</h1>
       <div>
@@ -256,11 +260,9 @@
       </div>
     </div>
     <div id="circles">
-      <button class="circle"></button>
-      &nbsp; &nbsp;
-      <button class="circle"></button>
-      &nbsp; &nbsp;
-      <button class="circle"></button>
+      <button class="circle" aria-label="First Slide"></button>
+      <button class="circle" aria-label="Second Slide"></button>
+      <button class="circle" aria-label="Third Slide"></button>
     </div>
   </body>
 </html>

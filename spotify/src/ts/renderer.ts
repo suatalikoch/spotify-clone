@@ -8,9 +8,11 @@ import ".././css/secondary-bar.css";
 import ".././css/footer.css";
 
 import ".././css/home.css";
-import ".././css/browse-page.css";
-import ".././css/playlist-page.css";
+import ".././css/browse.css";
+import ".././css/playlist.css";
+import ".././css/profile.css";
 import ".././css/lyrics.css";
+import ".././css/settings.css";
 import ".././css/404.css";
 
 const minimizeButton = document.getElementById(

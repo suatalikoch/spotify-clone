@@ -1,18 +1,21 @@
 #lyrics-content {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    scrollbar-color: var(--scroll-color) transparent;
+    scrollbar-width: 12px;
     box-sizing: border-box;
     height: 100%;
     padding: 1rem 8rem;
     border-radius: 8px;
     overflow-x: hidden;
     overflow-y: auto;
+    color: var(--color);
     font-weight: 500;
     font-size: 3rem;
     background-color: #b2568a;
 }
 
-/* Applies to WebKit browsers (e.g., Chrome, Edge, Safari) */
 #lyrics-content::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
+    width: 0.75rem;
 }
 
 #lyrics-content::-webkit-scrollbar-button {
@@ -20,30 +23,18 @@
 }
 
 #lyrics-content::-webkit-scrollbar-track {
-    background-color: #f1f1f1; /* Scrollbar track (background) */
+    background-color: #f1f1f1;
 }
 
 #lyrics-content::-webkit-scrollbar-thumb {
-    border-radius: 6px; /* Scrollbar thumb (the draggable part) */
-    background-color: var(--scroll-color); /* Rounded corners for the thumb */
+    border-radius: 6px;
+    background-color: var(--scroll-color);
 }
 
 #lyrics-content::-webkit-scrollbar-thumb:hover {
-    background-color: #898989; /* Darker on hover */
+    background-color: #898989;
 }
 
-/* Applies to Firefox */
-#lyrics-content {
-    scrollbar-color: var(--scroll-color) transparent; /* "auto" or "thin" */
-    scrollbar-width: 12px; /* thumb color and track color */
-}
-
-/* Styling for Edge and IE */
-#lyrics-content {
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-}
-
-/* Applies to WebKit browsers (e.g., Chrome, Edge, Safari) */
 #lyrics-content::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
+    width: 0.75rem;
 }
