@@ -1,7 +1,7 @@
 {
   "name": "spotify",
   "productName": "Spotify",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A spotify clone app made using Electron.",
   "main": ".webpack/main",
   "scripts": {
