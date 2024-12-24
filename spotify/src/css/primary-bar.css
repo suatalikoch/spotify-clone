@@ -42,7 +42,8 @@
 }
 
 #create-playlist-folder-button,
-#show-more-button {
+#show-more-button,
+#search-library-button {
   position: relative;
 }
 
@@ -62,9 +63,14 @@
   transform: translate(-30%, -280%);
 }
 
+#search-library-tooltip {
+  transform: translate(-10%, -10%);
+}
+
 #primary-bar-collapse-button:hover #collapse-library-tooltip,
 #create-playlist-folder-button:hover #playlist-folder-tooltip,
-#show-more-button:hover #show-more-tooltip {
+#show-more-button:hover #show-more-tooltip,
+#search-library-button:hover #search-library-tooltip {
   opacity: 1;
   visibility: visible;
 }

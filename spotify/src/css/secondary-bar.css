@@ -32,6 +32,37 @@
   overflow-y: auto;
 }
 
+#more-options-button,
+#secondary-bar-close-button,
+#copy-link-button,
+#add-to-playlist-button {
+  position: relative;
+}
+
+#more-options-tooltip {
+  transform: translate(-55%);
+}
+
+#secondary-bar-close-tooltip {
+  transform: translate(-15%);
+}
+
+#copy-link-tooltip {
+  transform: translate(-50%, -320%);
+}
+
+#add-to-playlist-tooltip {
+  transform: translate(-75%, -320%);
+}
+
+#more-options-button:hover #more-options-tooltip,
+#secondary-bar-close-button:hover #secondary-bar-close-tooltip,
+#copy-link-button:hover #copy-link-tooltip,
+#add-to-playlist-button:hover #add-to-playlist-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
 #song-img {
   object-fit: cover;
   border-radius: 8px;

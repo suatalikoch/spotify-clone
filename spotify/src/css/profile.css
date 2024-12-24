@@ -1,10 +1,14 @@
 #profile-content {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    scrollbar-color: var(--scroll-color) transparent;
+    scrollbar-width: 12px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    box-sizing: border-box;
     height: 100%;
     border-radius: 8px;
+    overflow-x: hidden;
+    overflow-y: auto;
     background-color: var(--secondary-color);
 }
+

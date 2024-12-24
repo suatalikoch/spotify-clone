@@ -181,8 +181,14 @@
         </div>
         <div id="playlists">
           <div id="bottom-header" class="space-between">
-            <button class="content-playlist-button-search collapsable">
+            <button
+              id="search-library-button"
+              class="content-playlist-button-search collapsable"
+            >
               <i class="fa fa-search size-14"></i>
+              <div id="search-library-tooltip" class="tooltip">
+                <h4>Search&nbsp;in&nbsp;Your&nbsp;Library</h4>
+              </div>
             </button>
             <button id="recents-button" class="text-button collapsable">
               Recents
@@ -237,14 +243,20 @@
             <a href="#" class="color-white bold anchor">My Shazam Tracks</a>
           </div>
           <div id="secondary-bar-header-right">
-            <button class="content-playlist-button">
+            <button id="more-options-button" class="content-playlist-button">
               <i class="fa fa-ellipsis size-16"></i>
+              <div id="more-options-tooltip" class="tooltip">
+                <h4>More&nbsp;options&nbsp;for&nbsp;Addictive</h4>
+              </div>
             </button>
             <button
               id="secondary-bar-close-button"
               class="content-playlist-button-search"
             >
               <i class="fa fa-close size-18"></i>
+              <div id="secondary-bar-close-tooltip" class="tooltip">
+                <h4>Close</h4>
+              </div>
             </button>
           </div>
         </div>
@@ -275,9 +287,18 @@
             <div>
               <button id="copy-link-button" class="content-playlist-button">
                 <i class="fa fa-arrow-up-from-bracket size-18"></i>
+                <div id="copy-link-tooltip" class="tooltip">
+                  <h4>Copy&nbsp;Song&nbsp;Link</h4>
+                </div>
               </button>
-              <button class="content-playlist-button">
+              <button
+                id="add-to-playlist-button"
+                class="content-playlist-button"
+              >
                 <i class="fa fa-circle-check color-lime size-18"></i>
+                <div id="add-to-playlist-tooltip" class="tooltip">
+                  <h4>Add&nbsp;to&nbsp;Playlist</h4>
+                </div>
               </button>
             </div>
           </div>
